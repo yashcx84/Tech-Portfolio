@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@700&family=Raleway&family=Ubuntu:wght@500&family=Work+Sans:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+    transition: all 0.4s;
+}
+
+/* ---navBar */
+
+.navContainer {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    padding: 5px;
+}
+
+.navContainer nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 18px 18px;
+    width: 95%;
+    background-color: #ffffff27;
+    padding-inline: 50px;
+    padding-block: 8px;
+}
+
+nav .leftNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    background-color: black;
+    border-radius: 9999px;
+}
+
+.leftNav img {
+    width: 3rem;
+}
+
+.rightNav {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.rightNav a {
+    text-decoration: none;
+    color: #b16cff;
+    font-family: 'Ubuntu';
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.2s ease-in;
+}
+
+.rightNav a:active {
+    transform: scale(0.9);
+}
+
+.resume i {
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.resume {
+    display: flex;
+    gap: 5px;
+}
+
+.resume:hover i {
+    opacity: 1;
+    transform: rotate(240deg);
+}
+
+.rightNav a {
+    opacity: 0.8;
+}
+
+.rightNav a:hover {
+    opacity: 1;
+    background-color: rgb(58, 58, 58);
+}
+
+.main {
+    margin: auto;
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0;
+    font-family: 'Yatra One';
+}
+
+.left {
+    padding: 40px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    /* border: 2px solid black; */
+
+}
+
+.left h3 {
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 8px;
+    color: #777777;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: clamp(0.4em, 0vw + 4vw, 2em);
+}
+
+#nameHead {
+    margin: auto;
+    width: 100%;
+    font-size: clamp(2em, 2vw + 10vw, 8em);
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    font-family: 'Bebas Neue';
+    transition: all 0.3s;
+}
+
+#nameHead span {
+    color: #ffffff;
+    /* Text color */
+    -webkit-text-stroke: 0.1px #000000;
+    /* WebKit (Chrome, Safari, Opera) syntax */
+    text-stroke: 0.1px #000000;
+    /* Standard syntax */
+
+}
+
+.right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
+}
+
+.img-holder {
+    padding-inline: 0px;
+    padding-bottom: 12px;
+    margin-bottom: 50px;
+    background-color: #b16cff;
+    border-radius: 20px;
+    transition: all 0.4s;
+}
+
+.img-holder img {
+    width: 16rem;
+    border-radius: 18px;
+    transition: all 0.4s;
+    transform: rotate(6deg);
+}
+
+
+.img-holder:hover img {
+    transform: scale(0.95);
+}
+
+.btn-holder {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    text-decoration: none;
+}
+
+.btn-holder button {
+    /* border: 2px solid black; */
+    border: none;
+    background-color: rgb(17, 17, 17);
+    color: #b16cff;
+    border: 1px solid #c18aff;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    width: 200px;
+    font-family: monospace;
+    transition: all 0.3s;
+}
+
+.btn-holder button:hover {
+    /* transform: scale(0.9); */
+    box-shadow: 8px 8px 0px rgba(156, 97, 224, 0.692);
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.8);
+}
+
+.aboutSec {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-block: 80px;
+}
+
+.aboutSec h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    padding: 40px;
+    font-family: 'Ubuntu';
+    color: rgba(31, 31, 31, 0.829);
+}
+
+.aboutSec p {
+    width: 60%;
+    padding: 50px;
+    background-color: #e1c6ff80;
+    font-family: monospace;
+    color: #0e0e0e;
+    font-size: 1.4em;
+    border-radius: 18px 18px 0 0;
+    border-bottom: 2px solid #a658ff;
+}
+
+.aboutSec i {
+    color: #9f4cff;
+}
+
+/* ---work SECTION--*/
+.todoSec {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+
+}
+
+.todoSec h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    padding: 40px;
+    font-family: 'Ubuntu';
+    color: rgba(31, 31, 31, 0.829);
+}
+
+.todoAssets {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.todoAssets .Asset {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.Asset hr {
+    border: 1px solid transparent;
+    margin-block: 20px;
+    width: -0%;
+    transition: all 0.3s;
+}
+
+.Asset:hover hr {
+    border: 1px solid #b16cff;
+    width: 50%;
+}
+
+.Asset h2 {
+    margin: auto;
+    width: 100%;
+    font-size: 4rem;
+    padding: 20px;
+    letter-spacing: 2px;
+    color: #b16cff;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+
+.Asset p {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(163, 163, 163, 0.212);
+    font-family: 'Raleway', sans-serif;
+    color: #313131;
+    font-size: 1rem;
+    letter-spacing: 4px;
+    font-weight: bold;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.asset01 {
+    text-align: left;
+}
+
+.asset02 {
+    text-align: right;
+}
+
+/* -----Products Section-- */
+.productSec {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.productSec h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    padding: 40px;
+    font-family: 'Ubuntu';
+    color: rgba(31, 31, 31, 0.829);
+}
+
+.productLayout {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 10px;
+}
+
+.imgContainer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.imgContainer img {
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.IMG01,
+.IMG04,
+.IMG06 {
+    grid-column: span 3;
+}
+
+.imgContainer img {
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.imgContainer:hover img {
+    opacity: 1;
+    transform: scale(1.01);
+}
+
+.imgContainer:hover {
+    background-color: rgba(122, 121, 121, 0.445);
+}
+
+.connectCons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gitContainer {
+    margin: auto;
+    display: flex;
+    width: 90%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gitSec {
+    text-decoration: none;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #a658ff;
+    border-radius: 8px;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all 0.2s;
+}
+
+.gitSec:active {
+    transform: scale(0.85);
+}
+
+.gitSec:hover {
+    box-shadow: 10px 10px 0 rgb(0, 0, 0);
+    color: wheat;
+}
+
+.head3 {
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 8px;
+    font-size: 1.5rem;
+    color: #3d3d3d;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.gitContainer hr {
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 9999px;
+    width: 100px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    margin: 50px;
+}
+
+.gitContainer:hover hr {
+    width: 200px;
+    opacity: 1;
+}
+
+/* -------footer */
+footer {
+    margin: auto;
+    display: flex;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+
+}
+footer i {
+    color: red;
+}
+footer h3 {
+    font-family: 'Work Sans';
+    color: #808080;
+    font-size: 1rem;
+}
+
+
+
+/* ----------mediaQuery */
+@media screen and (max-width:768px) {
+    .left h3 {
+        text-align: center;
+    }
+
+    #nameHead {
+        text-align: center;
+    }
+
+    .btn-holder {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        margin-bottom: 50px;
+    }
+
+    .aboutSec h2 {
+        width: 100%;
+        text-align: center;
+        font-size: 1.8rem;
+        font-family: 'Ubuntu';
+        color: rgba(31, 31, 31, 0.829);
+    }
+
+    .aboutSec p {
+        font-size: 1.2em;
+        width: 85%;
+    }
+
+    .todoSec h1 {
+        font-size: 1.8rem;
+    }
+
+    .Asset h2 {
+        font-size: 2rem;
+    }
+
+    .Asset p {
+        font-size: 1.2em;
+    }
+
+    .head3 {
+        letter-spacing: 3px;
+        font-size: 1.2rem;
+    }
+
+}
