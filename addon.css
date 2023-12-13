@@ -1,0 +1,32 @@
+/* .shadowContainer {
+    position: fixed;
+    background-color:rgba(137, 43, 226, 0);
+    top: 40px;
+    z-index: -9999;
+    left: -40px;
+    width: 20px;
+    box-shadow: 20px 20px 0px 200px rgba(193, 134, 248, 0.514), 20px 20px 0px 200px rgba(238, 125, 125, 0.548);
+    animation: shadow 0.3s alternate;
+    animation: moveShadowTop 2s infinite alternate, moveShadowBottom 2s infinite alternate;
+}
+@keyframes moveShadowTop {
+    0% {
+        top: 40px;
+        left: -40px;
+    }
+    100% {
+        top: 40px;
+        left: calc(100% - 20px);
+    }
+}
+
+@keyframes moveShadowBottom {
+    0% {
+        top: calc(100% - 20px);
+        left: -40px;
+    }
+    100% {
+        top: calc(100% - 20px);
+        left: calc(100% - 20px);
+    }
+} */

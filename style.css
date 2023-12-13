@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@700&family=Raleway&family=Ubuntu:wght@500&family=Work+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@700&family=Raleway&family=Ubuntu:wght@500&family=Work+Sans:wght@600&display=swap&family=Nova+Square');
 
 * {
     margin: 0;
@@ -12,18 +12,18 @@ body {
 }
 
 /* ---navBar */
-
 .navContainer {
     position: fixed;
-    top: 0;
+    top: 20px;
+    left: 20px;
     z-index: 999;
     margin: auto;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    backdrop-filter: blur(10px);
-    padding: 5px;
+    /* padding-left: 40px; */
+    /* backdrop-filter: blur(10px); */
 }
 
 .navContainer nav {
@@ -31,10 +31,38 @@ body {
     justify-content: space-between;
     align-items: center;
     border-radius: 0 0 18px 18px;
-    width: 95%;
-    background-color: #ffffff27;
-    padding-inline: 50px;
-    padding-block: 8px;
+    border-radius:999px;
+    width: 90px;
+    transition: all 0.6s;
+    /* background-color: rgb(0, 0, 0); */
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    /* border: 1.5px solid rgba(224, 224, 224, 0.445); */
+}
+
+nav:hover {
+    width: 400px;
+    cursor: pointer;
+    opacity: 1;
+    background-color: rgb(0, 0, 0);
+    /* padding-block: 8px; */
+}
+nav .icon i {
+    padding-left: 5px;
+    font-size: 1.4em;
+    color: #7f20ec;
+}
+.icon {
+    transition: all 0.4s;
+}
+nav:hover .icon{
+    opacity: 0;
+}
+nav:hover .rightNav {
+    opacity: 1;
+}
+nav:hover .rightNav a {
+    font-size: 1em;
 }
 
 nav .leftNav {
@@ -44,6 +72,8 @@ nav .leftNav {
     padding: 2px;
     background-color: black;
     border-radius: 9999px;
+    border: 2px dotted #9f4cff;
+    transition: all 0.8s;
 }
 
 .leftNav img {
@@ -55,16 +85,20 @@ nav .leftNav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
+    opacity: 0;
+    padding-right: 20px;
 }
 
 .rightNav a {
     text-decoration: none;
-    color: #b16cff;
+    color: #ffffff;
     font-family: 'Ubuntu';
+    font-family: 'Nova Square';
     padding: 10px;
     border-radius: 8px;
     transition: all 0.2s ease-in;
+    font-size: 0rem;
 }
 
 .rightNav a:active {
@@ -92,25 +126,32 @@ nav .leftNav {
 
 .rightNav a:hover {
     opacity: 1;
-    background-color: rgb(58, 58, 58);
+    color: #5813a7;
+    background-color: rgba(241, 241, 241, 0.801);
 }
 
 .main {
     margin: auto;
     width: 100%;
-    margin-top: 150px;
-    margin-bottom: 100px;
+    padding-top: 150px;
+    padding-bottom: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 0;
-    font-family: 'Yatra One';
+    /* padding-bottom: 0; */
+    background-image: url(MacBook\ Air\ -\ 3.png);
+    background-color: #0e0e0e;
+    /* background-color: #8f37f5; */
+    background-blend-mode: lighten;
+    /* object-fit:cover; */
+    background-size: cover;
+    /* font-family: 'Yatra One'; */
+    background-position: center;
 }
 
 .left {
     padding: 40px;
-    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -119,34 +160,31 @@ nav .leftNav {
 
 }
 
-.left h3 {
+.headline {
     width: 100%;
     font-family: 'Raleway', sans-serif;
+    font-family: 'Nova Square';
     letter-spacing: 8px;
     color: #777777;
     margin-bottom: 20px;
     text-align: left;
     font-size: clamp(0.4em, 0vw + 4vw, 2em);
+    transform: translateY(-800px);
 }
 
 #nameHead {
     margin: auto;
     width: 100%;
     font-size: clamp(2em, 2vw + 10vw, 8em);
+    font-size: clamp(2rem, 10vw, 8rem);
     letter-spacing: 8px;
     margin-bottom: 20px;
     font-family: 'Bebas Neue';
-    transition: all 0.3s;
+    color: #9850eb;
 }
 
 #nameHead span {
-    color: #ffffff;
-    /* Text color */
-    -webkit-text-stroke: 0.1px #000000;
-    /* WebKit (Chrome, Safari, Opera) syntax */
-    text-stroke: 0.1px #000000;
-    /* Standard syntax */
-
+    color: #a663e4;
 }
 
 .right {
@@ -157,24 +195,24 @@ nav .leftNav {
 }
 
 .img-holder {
-    padding-inline: 0px;
-    padding-bottom: 12px;
+    padding-bottom: 18px;
     margin-bottom: 50px;
-    background-color: #b16cff;
+    background-color: black;
     border-radius: 20px;
-    transition: all 0.4s;
+    /* transition: all 0.4s; */
+    transform: scale(0);
 }
 
 .img-holder img {
     width: 16rem;
     border-radius: 18px;
     transition: all 0.4s;
-    transform: rotate(6deg);
+    transform: rotate(8deg);
 }
 
-
 .img-holder:hover img {
-    transform: scale(0.95);
+    transform: rotate(0deg);
+    /* transform: scale(0.95); */
 }
 
 .btn-holder {
@@ -183,6 +221,7 @@ nav .leftNav {
     align-items: start;
     justify-content: start;
     text-decoration: none;
+    transform: scale(0);
 }
 
 .btn-holder button {
@@ -197,6 +236,7 @@ nav .leftNav {
     width: 200px;
     font-family: monospace;
     transition: all 0.3s;
+    /* transform: scale(0); */
 }
 
 .btn-holder button:hover {
@@ -224,8 +264,8 @@ button:active {
     text-align: center;
     font-size: 3rem;
     padding: 40px;
-    font-family: 'Ubuntu';
-    color: rgba(31, 31, 31, 0.829);
+    font-family: 'Nova Square';
+    color: rgba(0, 0, 0);
 }
 
 .aboutSec p {
@@ -252,7 +292,6 @@ button:active {
     align-items: center;
     justify-content: center;
     border-radius: 18px;
-
 }
 
 .todoSec h1 {
@@ -260,8 +299,8 @@ button:active {
     text-align: center;
     font-size: 3rem;
     padding: 40px;
-    font-family: 'Ubuntu';
-    color: rgba(31, 31, 31, 0.829);
+    font-family: 'Nova Square';
+    color: rgba(0, 0, 0);
 }
 
 .todoAssets {
@@ -301,8 +340,10 @@ button:active {
     font-size: 4rem;
     padding: 20px;
     letter-spacing: 2px;
-    color: #b16cff;
-    font-family: 'Josefin Sans', sans-serif;
+    color: #9e4efa;
+    /* font-family: 'Josefin Sans', sans-serif; */
+    /* font-family: 'Nova Square'; */
+    font-family: 'Ubuntu';
     text-align: center;
 }
 
@@ -343,7 +384,9 @@ button:active {
     font-size: 3rem;
     padding: 40px;
     font-family: 'Ubuntu';
-    color: rgba(31, 31, 31, 0.829);
+    font-family: 'Nova Square';
+    /* color: rgba(31, 31, 31, 0.829); */
+    color: rgba(0, 0, 0);
 }
 
 .productLayout {
@@ -469,9 +512,11 @@ footer {
     align-items: center;
 
 }
+
 footer i {
     color: red;
 }
+
 footer h3 {
     font-family: 'Work Sans';
     color: #808080;
@@ -523,6 +568,7 @@ footer h3 {
     .Asset p {
         font-size: 1.2em;
     }
+
     .head3 {
         letter-spacing: 3px;
         font-size: 1.2rem;
