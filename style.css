@@ -7,8 +7,9 @@
 }
 
 body {
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(255, 255, 255);
     transition: all 0.4s;
+    overflow-x: hidden;
 }
 
 /* ---navBar */
@@ -140,7 +141,7 @@ nav .leftNav {
     justify-content: center;
     align-items: flex-end;
     /* padding-bottom: 0; */
-    background-image: url(MacBook\ Air\ -\ 3.png);
+    background-image: url(MacBook\ Air\ -\ 5.png);
     background-color: #0e0e0e;
     /* background-color: #8f37f5; */
     background-blend-mode: lighten;
@@ -348,16 +349,38 @@ button:active {
 }
 
 .Asset p {
-    width: 100%;
+    width: auto;
     padding: 20px;
-    background-color: rgba(163, 163, 163, 0.212);
+    background-color: rgb(17, 17, 17);
     font-family: 'Raleway', sans-serif;
-    color: #313131;
+    color: #cccccc;
     font-size: 1rem;
     letter-spacing: 4px;
     font-weight: bold;
-    border-radius: 18px;
+    border-radius: 0 10px 0 10px;
     text-align: center;
+    /* border-left: 4px solid #6f1bcf; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease-out;
+}
+.skillContainer {
+    width:400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+  }
+ 
+.skillContainer img {
+    width: 1.4rem;
+}
+.Asset p:hover {
+    transform:scale(0.95);
+    cursor: pointer;
 }
 
 .asset01 {
@@ -392,7 +415,7 @@ button:active {
 .productLayout {
     width: 75%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 20px;
     padding: 10px;
 }
@@ -421,18 +444,17 @@ button:active {
 }
 
 .imgContainer img {
-    opacity: 0.5;
     transition: all 0.3s ease;
 }
 
-.imgContainer:hover img {
+/* .imgContainer:hover img {
     opacity: 1;
     transform: scale(1.01);
 }
 
 .imgContainer:hover {
     background-color: rgba(122, 121, 121, 0.445);
-}
+} */
 
 .connectCons {
     width: 100%;
@@ -573,5 +595,25 @@ footer h3 {
         letter-spacing: 3px;
         font-size: 1.2rem;
     }
+    .skillContainer {
+        overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 8px;
+    border: 2px solid #7f20ec4f;
+    border-radius: 8px;
+    justify-content: start;
+    /* background-color: #7f20ec; */
+    white-space: nowrap;
+    }
+     
+  .skillContainer::-webkit-scrollbar {
+    width: 0; 
+    display: none; 
+  }
+  
+  .skillContainer::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  
 
 }
