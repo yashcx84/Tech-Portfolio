@@ -94,7 +94,6 @@ nav .leftNav {
 .rightNav a {
     text-decoration: none;
     color: #ffffff;
-    font-family: 'Ubuntu';
     font-family: 'Nova Square';
     padding: 10px;
     border-radius: 8px;
@@ -313,7 +312,6 @@ button:active {
     justify-content: center;
     gap: 20px;
 }
-
 .todoAssets .Asset {
     display: flex;
     flex-direction: column;
@@ -367,10 +365,11 @@ button:active {
     transition: all 0.2s ease-out;
 }
 .skillContainer {
-    width:400px;
+    width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
     
   }
@@ -424,16 +423,49 @@ button:active {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    padding-top:0px;
+    padding-bottom: 0px;
     transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    /* background-color: rgb(194, 113, 231); */
+    /* border: 1px solid rgba(102, 101, 101, 0.356); */
+}
+.imgContainer p {
+    font-family: 'Nova Square';
+    border-radius:  8px 8px 0 0 ;
+    padding: 10px;
+    padding-right: 15px;
+    color: rgb(17, 17, 17);
+    cursor: pointer;
+    transition: all .3s ease-out;
+}
+.imgContainer a {
+    text-decoration: none;
+    outline: none;
+}
+.imgContainer p i {
+    transition: transform .3s ease-out;
+}
+.imgContainer p:hover i {
+    transform: translateX(8px);
+    color: #9850eb;
+}
+.imgContainer p:hover {
+    color: #9850eb;
 }
 
 .imgContainer img {
     display: block;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
+    border-radius: 0 0 10px 10px;
+    width: 80%;
+    /* height: 100%; */
     object-fit: cover;
 }
 
@@ -590,20 +622,14 @@ footer h3 {
     .Asset p {
         font-size: 1.2em;
     }
-
     .head3 {
         letter-spacing: 3px;
         font-size: 1.2rem;
     }
-    .skillContainer {
-        overflow-y: hidden;
-    overflow-x: scroll;
-    padding: 8px;
-    border: 2px solid #7f20ec4f;
-    border-radius: 8px;
-    justify-content: start;
-    /* background-color: #7f20ec; */
-    white-space: nowrap;
+    .productSec h1 {
+        
+        font-size: 1.8rem;
+
     }
      
   .skillContainer::-webkit-scrollbar {
