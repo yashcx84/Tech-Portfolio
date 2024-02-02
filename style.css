@@ -11,7 +11,7 @@
     --head-font: 'Space Grotesk', sans-serif;
     --font-tertary:'Orbitron', sans-serif;
     --my-black: #141414;
-    --secondary: #b565ff;
+    --secondary: #c485ff;
 }
 
 body {
@@ -463,7 +463,7 @@ button:active {
     border-radius: 8px;
     text-align: center;
     text-align: left;
-    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='26' height='26' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 0%, 1)'/><path d='M10-6V6M10 14v12M26 10H14M6 10H-6' transform='translate(3,0)' stroke-linecap='square' stroke-width='0.5' stroke='hsla(0, 0%, 42%, 0.84)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,-80)' fill='url(%23a)'/></svg>");
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='26' height='26' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 8%, 1)'/><path d='M10-6V6M10 14v12M26 10H14M6 10H-6' transform='translate(3,0)' stroke-linecap='square' stroke-width='0.5' stroke='hsla(0, 0%, 42%, 0.84)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,-80)' fill='url(%23a)'/></svg>")
 }
 
 .productLayout h3 p {
