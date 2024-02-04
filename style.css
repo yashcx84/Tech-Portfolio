@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Pacifico&family=Single+Day&family=Space+Grotesk:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Orbitron:wght@600&family=Space+Grotesk:wght@500&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -11,13 +11,11 @@
     --head-font: 'Space Grotesk', sans-serif;
     --font-tertary:'Orbitron', sans-serif;
     --my-black: #111111;
-    --secondary: #a069e0;
     --primary:#EDE6E3;
-    --tertary :#00e965;
-    --font02 : 'Josefin Sans' ;
-    --font03 : 'Ubuntu';
-    --font04 : 'Work Sans';
-    --font05 : 'Nova Square';
+    --secondary :#00e965;
+    --tertary:#afafaf;
+    --my-border:#fffafa6b;
+    --signature:'Dancing Script', cursive;
 }
 
 body {
@@ -26,12 +24,14 @@ body {
     cursor: url('cursor.png');
     scroll-behavior: smooth;
 }
+::selection #nameHead {
+    color: var(--secondary);
+} 
 
 
 /* ---navBar */
 .navContainer {
     margin: auto;
-    /* width: 400px; */
     position: sticky;
     top:8px;
     z-index: 999;
@@ -39,10 +39,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* gap: 4px; */
     padding: 2px;
-    /* background: linear-gradient(45deg, var(--secondary), #d4cfcf); */
-    /* background: linear-gradient(45deg, var(--secondary), var(--tertary)); */
 }
 
 .navContainer nav {
@@ -56,7 +53,7 @@ body {
     background-color: var(--my-black);
     font-family: var(--head-font);
     transition: all 0.6s;
-    border: 2px solid #fffafa6b;
+    border: 2px solid var(--my-border);
 }
 .navContainer #ham {
     display: flex;
@@ -76,28 +73,13 @@ body {
     right: 6px;
     width: 6px;
     height: 6px;
-    background-color: var(--tertary);
+    background-color: var(--secondary);
     border-radius: 999px;
 }
 #ham i {
     font-size: 1.4em;
-    color: var(--tertary);
-}
-#ham-window {
-    height: 0; /* Start with zero height */
-    width: 0px;
-    background-color: var(--my-black);
-    border-radius: 8px;
-    position: absolute;
-    top: 58px;
-    left: 48px;
-    overflow: hidden; /* Hide any content overflowing the element */
-    transition: height 0.4s ease-out; /* Apply transition effect to height */
-}
-
-.window-open {
-    width: 0px;
-    height: 200px; /* Set height to reveal content */
+    color: var(--secondary);
+    user-select: none;
 }
 
 nav .leftNav {
@@ -114,6 +96,7 @@ nav .leftNav {
 .leftNav img {
     width: 3rem;
     border-radius: 999px;
+    user-select: none;
 }
 
 .rightNav {
@@ -131,9 +114,11 @@ nav .leftNav {
     border-radius: 8px;
     transition: all 0.2s ease-in;
     font-size: 1rem;
+    user-select: none;
 }
 .contact {
     position: relative;
+    user-select: none;
 }
 
 .rightNav a:active {
@@ -144,6 +129,7 @@ nav .leftNav {
     opacity: 0;
     color: var(--my-black);
     transition: all 0.2s;
+    user-select: none;
 }
 
 .resume:hover i {
@@ -152,7 +138,7 @@ nav .leftNav {
 }
 
 .rightNav a:hover {
-    color: var(--tertary);
+    color: var(--secondary);
     background-color: var(--bg-body);
 }
 
@@ -166,7 +152,7 @@ nav .leftNav {
     justify-content: space-between;
     align-items: center;
     background-color: var(--bg-body);
-    /* border: 2px solid var(--my-black); */
+    
 }
 
 .left {
@@ -179,7 +165,6 @@ nav .leftNav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 2px solid var(--my-black); */
 }
 .dot {
     position: absolute;
@@ -187,7 +172,7 @@ nav .leftNav {
     left: 16px;
     width: 18px;
     height: 18px;
-    background-color: var(--tertary);
+    background-color: var(--secondary);
     border-radius: 999px;
 }
 
@@ -198,15 +183,15 @@ nav .leftNav {
     color: var(--my-black);
     font-size: clamp(0.2em, 0vw + 4vw, 1.6em);
     transform: translateY(-800px);
+    font-family: var(--font-tertary);
+    font-style: italic;
 }
 
 #nameHead {
     margin: auto;
     width: 100%;
-    /* letter-spacing: 4px; */
     padding: 2px;
-    font-size: clamp(3em, 8vw, 6em);
-    /* margin-bottom: 44px; */
+    font-size: clamp(3em, 7vw, 5em);
     font-family: 'Pacifico', cursive;
     font-family: var(--head-font);
     color: var(--my-black);
@@ -218,16 +203,19 @@ nav .leftNav {
     padding: 2px;
     padding-bottom: 32px;
     font-size: clamp(0.4em, 4vw, 1.4em);
-    /* border: 1px solid; */
-
-}
-
-.headline::selection {
-    color: var(--my-black);
 }
 
 #nameHead::selection {
     color: var(--secondary);
+}
+.headline::selection {
+    color: var(--secondary);
+}
+.head-description::selection {
+    color: var(--my-black);
+}
+h2::selection {
+    color: var(--secondary)
 }
 
 .right {
@@ -241,6 +229,7 @@ nav .leftNav {
     /* border: 1px solid; */
 }
 .right .msg-dot {
+    text-decoration: none;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -250,7 +239,8 @@ nav .leftNav {
     right: 68px;
     width: 48px;
     height: 48px;
-    background-color: var(--tertary);
+    background-color: var(--secondary);
+    color: var(--my-black);
     border-radius: 999px;
     padding-inline: 8px;
     transition: all 0.2s ease-out;
@@ -282,12 +272,6 @@ nav .leftNav {
     border-radius: 999px;
     transition: all 0.4s;
 }
-#signature {
-    padding-top: 8px;
-    width: 14em;
-    color: var(--tertary);
-}
-
 .Con-buttons {
     width: 100%;
     display: flex;
@@ -299,32 +283,39 @@ nav .leftNav {
 
 .Con-buttons a {
     background-color: var(--my-black);
-    color: var(--tertary);
-    padding: 16px;
+    color: var(--secondary);
     border-radius: 8px;
     font-size: 1rem;
-    width: 200px;
+    width: 148px;
     text-decoration: none;
     transition: all 0.3s;
     text-align: center;
     font-family: var(--head-font);
-    /* border: 1px solid #000000; */
-    /* cursor: pointer; */
     cursor: url('cursor.png');
+    user-select: none;
 }
 
 .Con-buttons #doc-btn {
-    background-color: var(--my-black);
-    color: var(--tertary);
+    background-color: var(--secondary);
+    color: var(--my-black);
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Con-buttons #mail-btn {
+    padding: 16px;
+
 }
 
 .Con-buttons #mail-btn:hover {
-    box-shadow: 0px 0px 0px 4px var(--tertary);
+    box-shadow: 0px 0px 0px 2px var(--secondary);
 }
 
 .Con-buttons #doc-btn:hover {
-    /* transform: scale(0.9); */
-    box-shadow: 0px 8px 0px var(--secondary);
+    box-shadow: 0px 0px 0px 1px var(--my-black);
     cursor: pointer;
 }
 
@@ -343,12 +334,12 @@ button:active {
     justify-content: center;
     align-items: center;
     background-color: var(--bg-body);
-    /* background-color: var(--secondary); */
 }
 
 .aero-container img {
     width: 2em;
     transition: all 0.8s ease-out;
+    user-select: none;
 }
 
 .aboutSec {
@@ -369,7 +360,7 @@ button:active {
     top: 64px;
     width: 8px;
     height: 8px;
-    background-color: var(--tertary);
+    background-color: var(--secondary);
     border-radius: 999px;
 }
 
@@ -388,29 +379,56 @@ button:active {
     width: 65%;
     display: flex;
     justify-content: center;
-    padding-inline: 12px;
     align-items: center;
-    background-color: var(--tertary);
+    background-color: var(--secondary);
     border-radius: 8px;
-    transform: rotate(4deg);
-
+    transform: rotate(3deg);
+    transition: all 0.3s ease-out;
+    padding-inline: 4px;
 }
-
-.aboutSec p {
-    position: relative;
-    padding: 36px;
-    background-color: var(--primary);
+.story-insider {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--my-black);
-    color: var(--bg-body);
-    font-size: 1.4em;
+    border: 1px solid var(--my-border);
+    transform: rotate(-3deg);
     border-radius: 16px;
-    transform: rotate(-4deg);
-    font-family: var(--head-font);
-    /* border: 1px solid #d4cfcf; */
+    padding: 40px;
+    padding-bottom: 0;
 }
-
+.story-insider h6 {
+    width: 100%;
+    font-size: 1em;
+    padding-block: 16px;
+    text-align: right;
+   font-family: var(--font-tertary);
+   font-style: italic;
+   color: var(--secondary);
+   user-select: none;
+}
+.aboutSec .story-insider p {
+    position: relative;
+    padding-bottom: 0;
+    color: var(--bg-body);
+    font-size: 1.3em;
+    font-family: var(--head-font);
+    transition: all 0.3s ease-out;
+    user-select: none;
+}
+.aboutSec p h6 {
+    margin: auto;
+    width: 100%;
+    float: right;
+    font-family: var(--signature);
+    padding: 16px;
+    user-select: none;
+}
 .aboutSec i {
-  color: var(--tertary);
+  color: var(--secondary);
 }
 
 .markee {
@@ -423,13 +441,14 @@ button:active {
     font-size: 2em;
     text-transform: uppercase;
     padding: 4px;
-    color: var(--tertary);
+    color: var(--secondary);
     font-family:var(--head-font);
+    user-select: none;
 }
 .divider {
     margin: auto;
     width: 44px;
-    border: 2px solid var(--tertary);
+    border: 2px solid var(--secondary);
     border-radius: 999px;
     margin-block: 48px;
 }
@@ -442,7 +461,6 @@ button:active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border-radius: 16px 16px 0 0; */
     padding-block: 48px;
     padding-bottom: 144px;
     border: 1px solid;
@@ -468,21 +486,21 @@ button:active {
 .Asset p {
     padding: 32px;
     width: 208px;
-    background-color: rgb(17, 17, 17);
+    background-color: var(--my-black);
     font-family: var(--head-font);
     color: var(--bg-body);
     font-size: 1rem;
     letter-spacing: 4px;
-    /* font-weight: bold; */
     border-radius:8px;
     text-align: center;
-    border-bottom: 2px solid var(--tertary);
+    border-bottom: 2px solid var(--secondary);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     transition: all 0.2s ease-out;
     position: relative;
+    user-select: none;
 }
 
 .skillContainer {
@@ -496,6 +514,7 @@ button:active {
 
 .skillContainer img {
     width: 1.4rem;
+    user-select: none;
 }
 
 .Asset p:hover {
@@ -512,6 +531,12 @@ button:active {
 }
 
 /* -----Products Section-- */
+#products {
+    border: 1px solid transparent;
+    margin-top: 28px;
+    border-radius: 999px;
+    /* width: 2px; */
+}
 .productSec {
     position: relative;
     margin: auto;
@@ -554,6 +579,7 @@ button:active {
     border-radius: 8px;
     text-align: center;
     text-align: left;
+    user-select: none;
    
 }
 
@@ -562,8 +588,9 @@ button:active {
     letter-spacing: 2px;
     padding-inline: 12px;
     font-family: var(--head-font);
-    color: var(--tertary);
+    color: var(--secondary);
     font-size: clamp(16px, 4vw, 24px);
+    user-select: none;
 }
 
 .live-btn {
@@ -577,8 +604,9 @@ button:active {
     cursor: pointer;
     color: var(--my-black);
     transition: all .3s ease-out;
-    background-color: var(--tertary);
-    /* border: 1px solid var(--bg-body); */
+    background-color: var(--secondary);
+    transform: scale(0);
+    user-select: none;
 }
 
 .imgContainer {
@@ -598,10 +626,12 @@ button:active {
 .imgContainer a {
     text-decoration: none;
     outline: none;
+    user-select: none;
 }
 
 .imgContainer p i {
     transition: transform .3s ease-out;
+    user-select: none;
 }
 
 .imgContainer p:hover i {
@@ -619,13 +649,15 @@ button:active {
     width: 100%;
     object-fit: cover;
     border-radius: 8px;
+    user-select: none;
 }
 .imgContainer:hover img{
     opacity: 0.6;
 }
 .imgContainer:hover .live-btn {
-    box-shadow: 88px 88px 144px var(--my-black);
+    box-shadow: 16px 16px 64px 5px var(--secondary);
     color: var(--bg-body);
+    transform: scale(1);
 }
 
 .IMG01,
@@ -636,6 +668,7 @@ button:active {
 
 .imgContainer img {
     transition: all 0.3s ease;
+    user-select: none;
 }
 
 
@@ -653,7 +686,6 @@ button:active {
     margin: auto;
     display: flex;
     width: 100%;
-    /* height: 100vh; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -665,15 +697,17 @@ button:active {
     display: flex;
     justify-content: space-around;
     align-items: center;
-   background-color: var(--my-black);
-   color: var(--tertary);
+     background-color: var(--my-black);
+   color: var(--secondary);
     border-radius: 8px;
     padding: 16px;
+    margin-top: 48px;
     font-size: 1.4em;
     letter-spacing: 2px;
     font-family: var(--head-font);
     transition: all 0.2s;
-    border: 1px solid var(--tertary);
+    box-shadow: 0px 0px 96px 5px var(--secondary);
+    border: 1px solid transparent;
 }
 
 .gitSec:active {
@@ -681,12 +715,13 @@ button:active {
 }
 
 .gitSec:hover {
-    box-shadow: 0px 0px 96px 5px var(--tertary);
-    border: 1px solid transparent;
+    /* border: 1px solid var(--secondary); */
+    box-shadow: 0px 0px 0px 1px var(--secondary);
 }
 
 .connectCons img {
     width: 4em;
+    user-select: none;
 }
 
 .gitContainer .head3 {
@@ -700,6 +735,7 @@ button:active {
     font-family: var(--head-font);
     color: var(--bg-body);
     margin-bottom: 16px;
+    user-select: none;
 }
 
 .my-message {
@@ -711,12 +747,13 @@ button:active {
     color: var(--my-black);
     text-align: center;
     font-family: var(--head-font);
+    user-select: none;
 }
 .my-message hr {
     margin: auto;
     margin-block: 24px;
     width: 2px;
-    border: 4px solid var(--tertary);
+    border: 4px solid var(--secondary);
     border-radius: 999px;
 }
 .avtar {
@@ -730,8 +767,7 @@ button:active {
 }
 .avtar img {
     width: 12em;
-    filter: drop-shadow(0px 16px 16px rgba(0, 0, 0, 0.185));
-    /* margin: auto; */
+    user-select: none;
 }
 .circle-structure {
     width: 100%;
@@ -751,8 +787,31 @@ button:active {
     padding: 2px;
 }
 .cons i {
-    color: #afafaf;
+    color: var(--tertary);
     font-size: 1.4em;
+}
+.back-to-top {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: rotate(90deg);
+    background-color: var(--my-black);
+    padding: 4px;
+    font-family: var(--font-tertary);
+    font-style: italic;
+    color: var(--secondary);
+    text-decoration: none;
+    border-radius: 4px;
+    width: 112px;
+    text-align: center;
+}
+.back-to-top i {
+    transition: all 0.3s ease-in-out;
+    color: var(--bg-body);
+    user-select: none;
+}
+.back-to-top:hover i {
+    transform: translateX(-8px);
 }
 /* -------footer */
 footer {
@@ -766,9 +825,10 @@ footer {
 
 footer h3 {
     font-family: var(--font-tertary);
-    color: #afafaf;
+    color: var(--tertary);
     font-size: 0.8rem;
     letter-spacing: 2px;
+    user-select: none;
 }
 
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Port</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/Images/Avatar.jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="cursor.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,10 +16,11 @@
 </head>
 
 <body>
+    <hr id="home">
     <div class="navContainer">
         <nav>
             <div class="leftNav">
-                <img src="Avatar-rmv.png" alt="">
+                <img src="Avatar-rmv.png" alt="My Image Model">
             </div>
             <div class="rightNav">
                 <a href="MyResume023.pdf" download="MyResume.pdf" class="resume">
@@ -39,32 +40,32 @@
             <div class="dot">
 
             </div>
-            <h3 class="headline">
+            <h3 class="headline" id="user-select">
                 Welcome, to my Port!
             </h3>
-            <h1 id="nameHead">Yash Jangid<span style="color: var(--my-black);">.</span></h1>
-            <p class="head-description">
-                Specialize in creating clean and engaging content that effectively communicates the message. With a
+            <h1 id="nameHead" id="user-select">Yash Jangid.</h1>
+            <p class="head-description" id="user-select">
+                Specialize in creating <span style="color: var(--my-black);">clean and engaging content that effectively communicates the message.</span>  With a
                 focus on simplicity & clarity.
             </p>
             <div class="Con-buttons">
-                <a class="btn" id="mail-btn" href="mailto:yashcx84@gmail.com">Let's Connect</a>
-                <!-- <a class="btn" id="doc-btn">Docs</a> -->
+                <a class="btn" id="mail-btn" href="mailto:yashcx84@gmail.com" target="_blank" >Let's Connect</a>
+                <a class="btn" target="_blank" href="https://wa.me//6350229611" id="doc-btn"><i class="fa-solid fa-mobile"></i></a>
             </div>
         </div>
         <div class="right">
-            <div class="msg-dot">
-                <i class="fa-solid fa-message"></i>
-            </div>
+            <a class="msg-dot" href="https://wa.me//6350229611">
+                <i class="fa-solid fa-comments"></i>
+            </a>
             <div class="img-holder">
-                <img id="myImg" src="mee.jpg" alt="">
+                <img id="myImg" src="mee.jpg" alt="My Profile Image">
             </div>
         </div>
     </div>
     <!-- --aboutSec -->
     <div class="aboutSec">
         <div class="aero-container">
-            <img src="story.png" alt="">
+            <img src="story.png" alt="Story Logo">
         </div>
         <div class="head-dot">
         </div>
@@ -72,19 +73,22 @@
             Unveiling Story
         </h2>
         <div class="story-container">
+            <div class="story-insider">
             <p>
-                <i class="fa-solid fa-quote-right" style="transform: rotate(180deg);"></i> Hello! I'm Yash, to be a
+                <i class="fa-solid fa-quote-right" style="transform: rotate(180deg);"></i> Hi, I'm Yash, to be a
                 Passionate Designer. Not yet Part
                 of a Industry or there is no Induststrial Experience. So, I Want to be a part of any Industry where I can
                 put my skills & showcase my work at better mode. More on I want to know what actually can I do for a
                 particular organization I'm working at <i class="fa-solid fa-quote-right"></i>
             </p>
+            <h6>~YASH</h6>
+        </div>
         </div>
     </div>
     <!-- <hr class="divider"> -->
     <div class="todoSec">
         <div class="aero-container">
-            <img src="tech.png" alt="">
+            <img src="tech.png" alt="Tech Logo">
         </div>
         <div class="head-dot">
         </div>
@@ -93,12 +97,12 @@
         </h2>
             <div class="Asset">
                 <div class="skillContainer">
-                    <p> <img src="js.png" alt="" srcset="">JavaScript</p>
-                    <p> <img src="React.png" alt="" srcset="">ReactJs</p>
-                    <p> <img src="node.png" alt="" srcset="">NodeJs</p>
-                    <p> <img src="pngwing.com.png" alt="" srcset="">TailwindCss</p>
-                    <p> <img src="bootstrap.png" alt=""> Bootstrap</p>
-                    <p> <img src="figma.png" alt="">Figma</p>
+                    <p> <img src="js.png" alt="Js Logo" srcset="">JavaScript</p>
+                    <p> <img src="React.png" alt="ReactJs Logo" srcset="">ReactJs</p>
+                    <p> <img src="node.png" alt="">NodeJs</p>
+                    <p> <img src="pngwing.com.png" alt="Tailwing Logo" srcset="">TailwindCss</p>
+                    <p> <img src="bootstrap.png" alt="Bootstrap Logo"> Bootstrap</p>
+                    <p> <img src="figma.png" alt="Figma Logo">Figma</p>
                 </div>
             </div>
             <hr id="products">
@@ -107,7 +111,7 @@
     <!-- -------Product Section -->
     <div class="productSec" >
         <div class="aero-container">
-            <img src="product.png" alt="">
+            <img src="product.png" alt="Poduct Logo">
         </div>
         <div class="head-dot">
         </div>
@@ -118,24 +122,24 @@
             <h3>01<p>GhostCedmics</p>
             </h3>
             <div class="imgContainer IMG06">
-                <img src="Product01.jpg">
-                <a href="https://yashcx84.github.io/Ghostmics_Web/">
+                <img src="Product01.jpg" alt="Product Image">
+                <a href="https://yashcx84.github.io/Ghostmics_Web/" target="_blank" >
                     <p class="live-btn">Live <i class="fa-solid fa-arrow-right-long"></i></p>
                 </a>
             </div>
             <h3>02<p>MeowMart</p>
             </h3>
             <div class="imgContainer IMG01">
-                <img src="product02.jpg">
-                <a href="https://yashcx84.github.io/Cat-Web/">
+                <img src="product02.jpg" alt="Product Image">
+                <a href="https://yashcx84.github.io/Cat-Web/" target="_blank" >
                     <p class="live-btn">Live <i class="fa-solid fa-arrow-right-long"></i></p>
                 </a>
             </div>
             <h3>03<p>Stand&Pin</p>
             </h3>
             <div class="imgContainer IMG04">
-                <img src="Product03.jpg">
-                <a href="https://pinout-yas-projects-e0ca31c4.vercel.app/">
+                <img src="Product03.jpg" alt="Product Image">
+                <a href="https://pinout-yas-projects-e0ca31c4.vercel.app/" target="_blank" >
                     <p class="live-btn">Live <i class="fa-solid fa-arrow-right-long"></i></p>
                 </a>
             </div>
@@ -159,7 +163,7 @@
     <hr>
    </div>
     <div class="avtar">
-        <img src="Avatar-rmv.png">
+        <img src="Avatar-rmv.png" alt="My Image Model">
         <div class="circle-structure">
             <div class="cons">
                 <a href="https://github.com/yashcx84" target="_blank"><i class="fab fa-github"></i></a>
@@ -171,6 +175,9 @@
                 <h3 id="date-obj"></h3>
             </footer>
         </div>
+        <a class="back-to-top" href="#home">
+            <i class="fa-solid fa-arrow-left"></i> Back
+        </a>
     </div>
 </body>
 <script src="index.js"></script>
