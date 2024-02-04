@@ -1,164 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Port</title>
-    <!-- ------- -->
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="model002-rmv.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/Images/Avatar.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="addon.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
         integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
 <body>
     <div class="navContainer">
         <nav>
             <div class="leftNav">
-                <img src="model002.jpeg" alt="">
+                <img src="/Images/Avatar-rmv.png" alt="">
             </div>
             <div class="rightNav">
-                <a href="MyResume023.pdf" download="MyResume.pdf" class="resume">
+                <a href="/Docs/MyResume023.pdf" download="MyResume.pdf" class="resume">
                     Resume <i class="fa-solid fa-arrow-up-long"></i>
                 </a>
-                <a href="https://wa.me/6350229611" class="contact" id>
-                    Contact
+                <a href="#products" class="contact" id>
+                    My Products
                 </a>
             </div>
         </nav>
     </div>
     <div class="main">
         <div class="left">
+            <div class="dot">
+
+            </div>
             <h3 class="headline">
                 Welcome, to my Port!
             </h3>
-            <h1 id="nameHead">Yash Jangid</h1>
+            <h1 id="nameHead">Yash Jangid<span style="color: var(--my-black);">.</span></h1>
+            <p class="head-description">
+                Specialize in creating clean and engaging content that effectively communicates the message. With a
+                focus on simplicity & clarity.
+            </p>
             <div class="Con-buttons">
                 <a class="btn" id="mail-btn" href="mailto:yashcx84@gmail.com">Let's Connect</a>
-                <a class="btn" id="doc-btn">Docs</a>
+                <!-- <a class="btn" id="doc-btn">Docs</a> -->
             </div>
         </div>
         <div class="right">
-            <div class="img-holder">
-                <img src="PersonalImg01.jpg" alt="">
+            <div class="msg-dot">
+                <i class="fa-solid fa-message"></i>
+                <!-- <p>Quick Message</p> -->
             </div>
-            <!-- <hr> -->
+            <div class="img-holder">
+                <img id="myImg" src="/Images/mee.jpg" alt="">
+                <!-- <img id="signature" src="/Images/signature.png" alt=""> -->
+            </div>
         </div>
     </div>
     <!-- --aboutSec -->
     <div class="aboutSec">
         <div class="aero-container">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA30lEQVR4nO3VvQrCMBiF4fcOrHV18Ma9CjfBwc2fWicnBy8lUkggFFuDlfZLOQ8EOtW+HIggIiJi2xG4MgPOn+w5hRijRazRItZoEWu0iDVaxBotYo0WsUaLWGN6kS1QA+s/hjTvegAHRrTzH/dMiEkJWft3OWDPiBbAyf/wC9gMCIkjbsCSkaXG9IW0I0omkhLTFWImIjXmU4i5iDjm3BHTDokjaksR32LiEPMRfTEhJJuIoLk+q+h/xrWeqymu2F8VwCWKCOcOrMhM0YrJMiIo/fVq6oodskxzRERkft7VCn5I4gfK4QAAAABJRU5ErkJggg==">
+            <img src="Images/story.png" alt="">
         </div>
-        <h2>Unveiling Story</h2>
-        <div class="story-container">
-            <p>
-            <i class="fa-solid fa-quote-right" style="transform: rotate(180deg);"></i> Hello! I'm Yash, to be a Passionate Designer. Not yet Part
-            of a Industry or there is no Induststrial Experience. So, I Want to be a part of a Industry where I can
-            put my skills & showcase my work at better mode. More on I want to know what actually can I do for a
-            particular organization I'm working at <i class="fa-solid fa-quote-right"></i>
-        </p></div>
-    </div>
-    <!-- -----skillset section -->
-    <div class="todoSec">
-        <div class="aero-container">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA30lEQVR4nO3VvQrCMBiF4fcOrHV18Ma9CjfBwc2fWicnBy8lUkggFFuDlfZLOQ8EOtW+HIggIiJi2xG4MgPOn+w5hRijRazRItZoEWu0iDVaxBotYo0WsUaLWGN6kS1QA+s/hjTvegAHRrTzH/dMiEkJWft3OWDPiBbAyf/wC9gMCIkjbsCSkaXG9IW0I0omkhLTFWImIjXmU4i5iDjm3BHTDokjaksR32LiEPMRfTEhJJuIoLk+q+h/xrWeqymu2F8VwCWKCOcOrMhM0YrJMiIo/fVq6oodskxzRERkft7VCn5I4gfK4QAAAABJRU5ErkJggg==">
+        <div class="head-dot">
         </div>
         <h2>
-            What I Do
+            Unveiling Story
         </h2>
-        <div class="todoAssets">
-            <div class="Asset">
-                <h2 class="asset01">
-                    Web Development
-                </h2>
-                <div class="skillContainer">
-                    <p> <img src="js.png" alt="" srcset="">JavaScript</p>
-                    <p> <img src="atom.png" alt="" srcset="">ReactJs</p>
-                    <p> <img src="pngwing.com.png" alt="" srcset="">TailwindCss</p>
-                    <p> <img src="bootstrap.png" alt=""> Bootstrap</p>
-                    <p> <img src="figma.png" alt=""> Figma</p>
-                </div>
-                <hr>
-            </div>
+        <div class="story-container">
+            <p>
+                <i class="fa-solid fa-quote-right" style="transform: rotate(180deg);"></i> Hello! I'm Yash, to be a
+                Passionate Designer. Not yet Part
+                of a Industry or there is no Induststrial Experience. So, I Want to be a part of any Industry where I can
+                put my skills & showcase my work at better mode. More on I want to know what actually can I do for a
+                particular organization I'm working at <i class="fa-solid fa-quote-right"></i>
+            </p>
         </div>
+    </div>
+    <!-- <hr class="divider"> -->
+    <div class="todoSec">
+        <div class="aero-container">
+            <img src="Images/tech.png" alt="">
+        </div>
+        <div class="head-dot">
+        </div>
+        <h2>
+            Technologies
+        </h2>
+            <div class="Asset">
+                <div class="skillContainer">
+                    <p> <img src="/Images/js.png" alt="" srcset="">JavaScript</p>
+                    <p> <img src="/Images/React.png" alt="" srcset="">ReactJs</p>
+                    <p> <img src="/Images/node.png" alt="" srcset="">NodeJs</p>
+                    <p> <img src="/Images/pngwing.com.png" alt="" srcset="">TailwindCss</p>
+                    <p> <img src="/Images/bootstrap.png" alt=""> Bootstrap</p>
+                    <p> <img src="/Images/figma.png" alt="">Figma</p>
+                </div>
+            </div>
+            <hr id="products">
     </div>
 
     <!-- -------Product Section -->
-    <div class="productSec">
+    <div class="productSec" >
         <div class="aero-container">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA30lEQVR4nO3VvQrCMBiF4fcOrHV18Ma9CjfBwc2fWicnBy8lUkggFFuDlfZLOQ8EOtW+HIggIiJi2xG4MgPOn+w5hRijRazRItZoEWu0iDVaxBotYo0WsUaLWGN6kS1QA+s/hjTvegAHRrTzH/dMiEkJWft3OWDPiBbAyf/wC9gMCIkjbsCSkaXG9IW0I0omkhLTFWImIjXmU4i5iDjm3BHTDokjaksR32LiEPMRfTEhJJuIoLk+q+h/xrWeqymu2F8VwCWKCOcOrMhM0YrJMiIo/fVq6oodskxzRERkft7VCn5I4gfK4QAAAABJRU5ErkJggg==">
+            <img src="Images/product.png" alt="">
         </div>
-        <h2>
+        <div class="head-dot">
+        </div>
+        <h2 >
             Products
         </h2>
         <div class="productLayout">
-            <h3>01<p>Tech Ancestor</p></h3>
+            <h3>01<p>GhostCedmics</p>
+            </h3>
             <div class="imgContainer IMG06">
-                <img src="Product01.jpg">
+                <img src="/Images/Product01.jpg">
                 <a href="https://yashcx84.github.io/Ghostmics_Web/">
                     <p class="live-btn">Live <i class="fa-solid fa-arrow-right-long"></i></p>
                 </a>
             </div>
-            <h3>02<p>MeowMart</p></h3>
+            <h3>02<p>MeowMart</p>
+            </h3>
             <div class="imgContainer IMG01">
-                <img src="product02.jpg">
+                <img src="/Images/product02.jpg">
                 <a href="https://yashcx84.github.io/Cat-Web/">
                     <p class="live-btn">Live <i class="fa-solid fa-arrow-right-long"></i></p>
                 </a>
             </div>
-            <h3>03<p>Stand & Pin</p></h3>
+            <h3>03<p>Stand&Pin</p>
+            </h3>
             <div class="imgContainer IMG04">
-                <img src="Product03.jpg">
+                <img src="/Images/Product03.jpg">
                 <a href="https://pinout-yas-projects-e0ca31c4.vercel.app/">
                     <p class="live-btn">Live <i class="fa-solid fa-arrow-right-long"></i></p>
                 </a>
             </div>
         </div>
+        <div class="gitContainer">
+            <h4 class="head3">
+                Inspect More Products
+            </h4>
+            <div class="connectCons">
+                <!-- <img src="Indicator.jpg" alt=""> -->
+                <a class="gitSec" target="_blank" href="https://github.com/yashcx84">
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+                </a>
+            </div>
+        </div>
     </div>
     <!--  -->
-    <div class="gitContainer">
-        <div class="aero-container">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA30lEQVR4nO3VvQrCMBiF4fcOrHV18Ma9CjfBwc2fWicnBy8lUkggFFuDlfZLOQ8EOtW+HIggIiJi2xG4MgPOn+w5hRijRazRItZoEWu0iDVaxBotYo0WsUaLWGN6kS1QA+s/hjTvegAHRrTzH/dMiEkJWft3OWDPiBbAyf/wC9gMCIkjbsCSkaXG9IW0I0omkhLTFWImIjXmU4i5iDjm3BHTDokjaksR32LiEPMRfTEhJJuIoLk+q+h/xrWeqymu2F8VwCWKCOcOrMhM0YrJMiIo/fVq6oodskxzRERkft7VCn5I4gfK4QAAAABJRU5ErkJggg==">
-        </div>
-        <h2 class="head3">
-            Inspect More 
-        </h2>
-        <div class="connectCons">
-            <img src="Indicator.jpg" alt="">
-            <a class="gitSec" href="https://github.com/yashcx84">
-                <i class="fa-brands fa-github"></i>
-                GitHub
-            </a>
-        </div>
-    </div>
-    <!-- <footer>
-        <h3 id="date-obj"></h3>
-    </footer> -->
+   <div class="my-message">
+    <h2>Thanks! Your visit is greatly appreciated.</h2>
+    <hr>
+   </div>
     <div class="avtar">
-        <img src="model002-rmv.png" alt="">
+        <img src="/Images/Avatar-rmv.png">
+        <div class="circle-structure">
+            <div class="cons">
+                <a href="https://github.com/yashcx84" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yashjangidd/" target="_blank"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/yashcx84_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <footer>
+                <h3 id="date-obj"></h3>
+            </footer>
+        </div>
     </div>
 </body>
 <script src="index.js"></script>
 <script>
     // GSAP animation code
     gsap.to("#nameHead", {
-        x: 0, // Move the text 200 pixels to the right
-        duration: 1, // Animation duration in seconds
-        ease: "power2.out", // Easing function
-        // repeat: -1, // Repeat indefinitely
-        // yoyo: true // Alternate back and forth
+        x: 0,
+        duration: 1,
+        ease: "power2.out",
     });
     gsap.to(".headline", {
-        y: 0, // Move the text 200 pixels to the right
-        duration: 1, // Animation duration in seconds
-        ease: "power2.out", // Easing function
-        // repeat: -1, // Repeat indefinitely
-        // yoyo: true // Alternate back and forth
+        y: 0,
+        duration: 1,
+        ease: "power2.out",
     });
     gsap.to(".btn-holder", {
         scale: 1,
@@ -169,8 +194,6 @@
         scale: 1, // Move the text 200 pixels to the right
         duration: 1, // Animation duration in seconds
         ease: "power2.out", // Easing function
-        // repeat: -1, // Repeat indefinitely
-        // yoyo: true // Alternate back and forth
     });
 </script>
 
