@@ -10,7 +10,7 @@
     --bg-body: #fffafa;
     --head-font: 'Space Grotesk', sans-serif;
     --font-tertary:'Orbitron', sans-serif;
-    --my-black: #222220;
+    --my-black: #111111;
     --secondary: #a069e0;
     --primary:#EDE6E3;
     --tertary :#00e965;
@@ -51,7 +51,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 8px;
+    padding: 12px;
     border-radius:12px;
     background-color: var(--my-black);
     font-family: var(--head-font);
@@ -69,6 +69,15 @@ body {
     border-radius: 0 12px 12px 0;
     background-color: var(--my-black);
     position: relative;
+}
+.notify-dot {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--tertary);
+    border-radius: 999px;
 }
 #ham i {
     font-size: 1.4em;
@@ -122,6 +131,9 @@ nav .leftNav {
     border-radius: 8px;
     transition: all 0.2s ease-in;
     font-size: 1rem;
+}
+.contact {
+    position: relative;
 }
 
 .rightNav a:active {
