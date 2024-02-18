@@ -50,7 +50,7 @@ header {
 }
 
 .navContainer nav {
-    max-width: 390px;
+    max-width: 340px;
     width: 92%;
     display: flex;
     justify-content: space-evenly;
@@ -146,7 +146,7 @@ header {
 
 #toggleContainer .toggleIcons {
     width: 100%;
-    max-width: 64vh;
+    max-width: 100vh;
     padding: 28px;
     border-radius: 24px;
     display: flex;
