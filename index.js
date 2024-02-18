@@ -4,11 +4,27 @@ let mydate = new Date();
 output.innerHTML = "Buildx" + "@" + mydate.getFullYear();
 
 
-// Toggle class
-var toggleContainer = document.getElementById("toggleContainer");
-document.getElementById("toggleBtn").addEventListener('click', () => {
-    toggleContainer.classList.toggle('hidden-navigation');
+const blurObj = document.getElementsByClassName('blur');
+const toggleContainer = document.getElementById("toggleContainer");
+const toggleBtn = document.getElementById("toggleBtn");
+const iconImg = toggleBtn.querySelector("#ham-icon"); // Use querySelector to get the element by ID
+
+toggleBtn.addEventListener('click', () => {
+    toggleContainer.classList.toggle('show-navigation');
+    iconImg.classList.toggle('fa-xmark');
+
+    for (let i = 0; i < blurObj.length; i++) {
+        // Skip applying 'dimmed' class to toggleContainer and toggleBtn
+        if (blurObj[i] !== toggleContainer && blurObj[i] !== toggleBtn) {
+            if (toggleContainer.classList.contains('show-navigation')) {
+                blurObj[i].classList.add('dimmed');
+            } else {
+                blurObj[i].classList.remove('dimmed');
+            }
+        }
+    }
 });
+
 
 
 // Navigation Links
@@ -20,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         navLink.addEventListener("click", function (event) {
             event.preventDefault();
 
+
             const targetId = navLink.getAttribute("href").substring(1);
             const targetSection = document.getElementById(targetId);
 
@@ -28,8 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     top: targetSection.offsetTop,
                     behavior: "smooth"
                 });
+                
             }
-            toggleContainer.classList.remove('hidden-navigation');
+            toggleContainer.classList.remove('show-navigation');
+            for (let i = 0; i < blurObj.length; i++) {
+                blurObj[i].classList.remove('dimmed');
+            }
+            iconImg.classList.toggle('fa-xmark');
+
         });
     });
 
@@ -67,11 +90,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000);
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const backToTopButton = document.querySelector('.back-to-top');
 
     // Show back-to-top button when scrolling down
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 600) {
             backToTopButton.style.display = 'block';
         } else {
@@ -80,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Smooth scrolling effect
-    backToTopButton.addEventListener('click', function(e) {
+    backToTopButton.addEventListener('click', function (e) {
         e.preventDefault();
 
         const targetId = this.getAttribute('href');
@@ -119,4 +142,11 @@ function checkScroll() {
 
 window.addEventListener('scroll', checkScroll);
 checkScroll();
+
+
+gsap.to(".headline", {
+    duration: 2,
+    ease: "power2.out",
+    x: 0,
+});
 

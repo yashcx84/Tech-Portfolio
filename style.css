@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Orbitron:wght@600&family=Space+Grotesk:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Space+Grotesk:wght@500&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Annapurna+SIL:wght@400;700&family=Barriecito&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
     margin: 0;
@@ -11,38 +10,31 @@
 :root {
     --bg-body: #fffafa;
     --head-font: 'Space Grotesk', sans-serif;
-    --font-tertary: 'Orbitron', sans-serif;
+    --font-tertiary: 'Orbitron', sans-serif;
+    --font-secondary: "Josefin Sans", sans-serif;
     --my-black: #111111;
-    --primary: #EDE6E3;
-    --secondary: #00e965;
-    --tertary: #afafaf;
-    --my-border: #fffafa6b;
-    --color-tertary: #777777;
-    --color-forth: #b3b3b3;
-    --color-black: #232223;
-    --toggle-btn: #eeeeee73;
-    --color-fivth: #d1d1d173;
+    --color-primary: #EDE6E3;
+    --color-secondary: #00e965;
+    --color-tertiary: #afafaf;
+    --color-quaternary: #b3b3b3;
+    --color-quinary: #d1d1d173;
+    --color-shadow: #05c25796;
     --color-blast: #ff0000;
+    --color-black: #232223;
     --color-gray: #b9b9b980;
+    --toggle-btn: #eeeeee73;
 }
 
 body {
     background-color: var(--bg-body);
-    transition: all .3s ease-out;
-    scroll-behavior: smooth;
 }
 
 body img {
     pointer-events: none;
 }
 
-::selection #nameHead {
-    color: var(--secondary);
-}
-
-
-/* ---navBar */
-.navContainer {
+/* ---Top Navigations Bar*/
+header {
     width: 100%;
     margin: auto;
     position: fixed;
@@ -52,12 +44,14 @@ body img {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 8px;
     padding: 2px;
+
 }
 
 .navContainer nav {
-    width: 100%;
     max-width: 390px;
+    width: 88%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -66,24 +60,131 @@ body img {
     background-color: var(--my-black);
     font-family: var(--head-font);
     transition: all 0.6s;
-    border: 2px solid var(--my-border);
+    border: 2px solid var(--color-quinary);
 }
 
 .notify-dot {
     position: absolute;
-    top: 6px;
-    right: 6px;
+    top: 12px;
+    right: 16px;
     width: 7px;
     height: 7px;
-    background-color: var(--secondary);
+    background-color: var(--color-secondary);
     border-radius: 999px;
 }
+
+/* Bottom Navigation */
+.bottom-nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    z-index: 9;
+    position: relative;
+   
+}
+
+.bottom-nav .icon {
+    width: 64px;
+    height: 64px;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-black);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    border: 2px solid var(--color-quinary);
+    background-color: var(--my-black);
+}
+
+.bottom-nav i{
+    font-size: 1.6em;
+    color: var(--color-primary);
+}
+
+.bottom-nav #toggleBtn:active {
+    transform: scale(0.8);
+}
+
+.dimmed{
+   filter: brightness(0.7) grayscale(4) !important;
+}
+
+
+
+/* toggle container */
+#toggleContainer {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    z-index: 4;
+    padding: 24px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0) translateY(1400px);
+    transition: transform 0.4s ease-in-out;
+    background-color: var(--color-black);
+    flex-direction: column;
+}
+
+/* hidden toggle Class */
+.show-navigation {
+    transform: scale(1) translateY(0)!important;
+}
+
+.active-link {
+    background-color: var(--bg-body);
+    color: var(--color-black) !important;
+}
+
+#toggleContainer .toggleIcons {
+    width: 100%;
+    max-width: 64vh;
+    padding: 28px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+#toggleContainer img {
+    width: 8em;
+}
+
+.toggleIcons a {
+    text-decoration: none;
+    color: var(--bg-body);
+    width: 100%;
+    text-align: center;
+    font-family: var(--head-font);
+    font-size: 1.2em;
+    padding: 16px 24px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+.toggleIcons a:hover {
+    transform: translateX(24px);
+    text-decoration: underline;
+    text-decoration-color: var(--bg-body);
+    cursor: pointer;
+}
+
 
 nav .leftNav {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1px;
     margin-left: 16px;
     border-radius: 999px;
     background-color: var(--bg-body);
@@ -121,7 +222,7 @@ nav .leftNav {
 }
 
 .rightNav a:active {
-    transform: scale(0.9);
+    transform: scale(0.95);
 }
 
 .resume i {
@@ -137,19 +238,19 @@ nav .leftNav {
 }
 
 .rightNav a:hover {
-    color: var(--secondary);
+    color: var(--color-secondary);
     background-color: var(--bg-body);
 }
 
 .main {
     margin: auto;
-    padding: 112px 18px;
+    padding: 92px 18px;
+    padding-top: 144px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: var(--bg-body);
-
 }
 
 .left {
@@ -162,26 +263,28 @@ nav .leftNav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* transform: translateY(-400px);
+    opacity: 0; */
 }
 
 .dot {
     position: absolute;
     top: 16px;
     left: 16px;
-    width: 19px;
-    height: 19px;
-    background-color: var(--secondary);
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-secondary);
     border-radius: 999px;
 }
-
 
 .headline {
     width: 100%;
     font-family: var(--head-font);
     color: var(--my-black);
     font-size: clamp(0.2em, 0vw + 4vw, 1.6em);
-    font-family: var(--font-tertary);
+    font-family: var(--font-tertiary);
     font-style: italic;
+    transform: translateX(-300px);
 }
 
 .heads {
@@ -193,15 +296,16 @@ nav .leftNav {
     display: inline;
     width: 100%;
     padding: 2px;
-    font-size: clamp(3em, 6vw, 5em);
-    font-family: 'Pacifico', cursive;
+    font-size: clamp(3em, 8vw, 6em);
     font-family: var(--head-font);
     color: var(--my-black);
-
+    user-select: none;
 }
 
-#nameHead:hover {
-    color: var(--secondary);
+#nameHead span:hover {
+    color: var(--color-secondary);
+    background-color: var(--color-black);
+    cursor: cell;
 }
 
 .head-description {
@@ -213,12 +317,16 @@ nav .leftNav {
     font-size: clamp(0.4em, 4vw, 1.4em);
 }
 
+.head-description span {
+    user-select: none;
+}
+
 #nameHead::selection {
-    color: var(--secondary);
+    color: var(--color-secondary);
 }
 
 .headline::selection {
-    color: var(--secondary);
+    color: var(--color-secondary);
 }
 
 .head-description::selection {
@@ -226,7 +334,7 @@ nav .leftNav {
 }
 
 h2::selection {
-    color: var(--secondary)
+    color: var(--color-secondary)
 }
 
 .right {
@@ -237,7 +345,6 @@ h2::selection {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid; */
 }
 
 .right .msg-dot {
@@ -247,11 +354,11 @@ h2::selection {
     align-items: center;
     position: absolute;
     z-index: 1;
-    top: 68px;
-    right: 68px;
-    width: 48px;
-    height: 48px;
-    background-color: #09ee6ce7;
+    top: 44px;
+    right: 44px;
+    width: 54px;
+    height: 54px;
+    background-color: var(--color-black);
     color: var(--my-black);
     border-radius: 999px;
     padding-inline: 8px;
@@ -259,7 +366,10 @@ h2::selection {
     cursor: pointer;
     font-size: 1em;
     transform: scale(1.2);
-    box-shadow: 0px 16px 64px 5px var(--secondary);
+    box-shadow: 0px 16px 64px 5px var(--color-shadow);
+}
+.msg-dot i {
+color: var(--color-secondary);
 }
 
 .msg-dot:hover {
@@ -279,11 +389,11 @@ h2::selection {
 }
 
 .img-holder img[id=myImg] {
-    width: 16rem;
+    width: 20rem;
     position: relative;
     bottom: -24px;
     left: -24px;
-    border-radius: 999px;
+    border-radius: 32px;
     transition: all 0.4s;
 }
 
@@ -298,20 +408,21 @@ h2::selection {
 
 .Con-buttons a {
     background-color: var(--my-black);
-    color: var(--secondary);
+    color: var(--color-secondary);
     border-radius: 8px;
     font-size: 1rem;
-    width: 148px;
+    width: 160px;
     text-decoration: none;
     transition: all 0.3s;
     text-align: center;
     font-family: var(--head-font);
     cursor: url('cursor.png');
     user-select: none;
+
 }
 
 .Con-buttons #doc-btn {
-    background-color: var(--secondary);
+    background-color: var(--color-secondary);
     color: var(--my-black);
     width: 56px;
     height: 56px;
@@ -322,12 +433,12 @@ h2::selection {
 }
 
 .Con-buttons #mail-btn {
-    padding: 16px;
+    padding: 24px;
 
 }
 
 .Con-buttons #mail-btn:hover {
-    box-shadow: 0px 0px 0px 2px var(--secondary);
+    box-shadow: 0px 18px 0px -8px var(--color-secondary);
 }
 
 .Con-buttons #doc-btn:hover {
@@ -350,18 +461,22 @@ button:active {
     padding: 104px 18px;
 }
 
-.aboutSec hr {
+.aboutSec hr,
+.productSec h3 hr,
+.todoSec hr {
     width: 40px;
     border-radius: 999px;
-    color: var(--secondary);
-    border-bottom: 2px solid var(--secondary);
+    color: var(--color-secondary);
+    border-bottom: 2px solid var(--color-secondary);
     border-top: 0;
     border-right: 0;
     border-left: 0;
-    border-color: var(--secondary);
-    margin-block: 16px;
+    border-color: var(--color-secondary);
+    margin-block: 24px;
     position: absolute;
-    top: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .aboutSec h3 {
@@ -372,24 +487,25 @@ button:active {
     font-family: var(--head-font);
     color: var(--bg-body);
     position: relative;
+    text-align: center;
 }
 
 .story-container {
     width: 84%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-radius: 12px;
     transition: all 0.3s ease-out;
     gap: 32px;
     margin-block: 48px;
-    
+
 
 }
 
 .story-insider {
-    min-width: 340px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -398,24 +514,12 @@ button:active {
     border-radius: 16px;
     padding: 4px;
     padding-top: 36px;
+    /* border: 1px solid var(--color-blast); */
 }
 
 .story-container img {
     width: 18em;
     border-radius: 24px;
-}
-
-.story-insider h6 {
-    width: 100%;
-    font-size: 1em;
-    padding-top: 16px;
-    text-align: right;
-    font-family: var(--font-tertary);
-    font-style: italic;
-    color: var(--secondary);
-    user-select: none;
-    font-family: "Barriecito", system-ui;
-    font-weight: 400;
 }
 
 .aboutSec .story-insider h1 {
@@ -426,45 +530,65 @@ button:active {
     color: var(--bg-body);
     transition: all 0.3s ease-out;
     user-select: none;
-    font-family: "Josefin Sans", sans-serif;
+    font-family: var(--font-secondary);
     line-height: 1.6;
+    text-align: center;
 }
 
 .story {
+    /* width: 84%; */
     width: 320px;
-    background-color: var(--secondary);
+    background-color: var(--color-secondary);
     padding: 44px;
     border-radius: 24px;
     font-family: var(--head-font);
-    box-shadow: 0 32px 48px 2px rgba(5, 194, 87, 0.589);
+    box-shadow: 0 32px 52px -2px var(--color-shadow);
     transition: all 0.4s ease-in-out;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .story-insider p {
     width: 100%;
-    color: var(--color-fivth);
+    color: var(--color-quinary);
     font-family: var(--head-font);
     font-size: 1.2em;
-    font-family: var(--font-tertary);
+    font-family: var(--font-tertiary);
     font-style: italic;
     font-weight: 100;
-    text-align: right;
+    text-align: center;
+    letter-spacing: 4px;
 }
 
 .story-insider h4 {
     width: 100%;
     color: var(--bg-body);
     font-weight: 200;
-    font-size: 1.8em;
+    font-size: 1.5em;
     padding-block: 12px;
     font-family: var(--head-font);
     line-height: 1.4;
-    text-align: right;
+    text-align: center;
+}
+
+.stories {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+.stories p {
+    font-size: 1.2em;
+}
+
+.story02 {
+    background-color: var(--bg-body);
+    color: var(--color-black);
 }
 
 .story:hover {
@@ -473,22 +597,20 @@ button:active {
 
 .aboutSec i {
     padding: 8px;
-    color: var(--secondary);
+    color: var(--color-secondary);
 }
 
 .story .sphare {
     position: absolute;
-    top: -24px;
-    right: -24px;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+    background-color: var(--color-black);
 }
 
-.sphare {
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
-    backdrop-filter: blur(8px);
-    background-color: #97999865;
-}
 
 /* ---work SECTION--*/
 .todoSec {
@@ -501,45 +623,64 @@ button:active {
     padding: 96px 18px;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
 .todoSec h3 {
     width: 84%;
     font-size: 1.8em;
     margin-bottom: 36px;
     padding-left: 8px;
     font-family: var(--head-font);
+    text-align: center;
+    position: relative;
 }
 
 .todoSec h2 {
-    text-align: left;
-    width: 84%;
-    font-family: "Josefin Sans", sans-serif;
-    color: var(--secondary);
-    margin-bottom: 24px;
+    width: 100%;
+    font-family: var(--font-secondary);
+    color: var(--color-black);
     font-size: clamp(1.8em, 8vw, 3em);
+    text-align: center;
+}
+
+.todoSec h4 {
+    width: 100%;
+    color: var(--color-tertiary);
+    font-weight: 200;
+    font-size: 1.4em;
+    padding-block: 16px;
+    font-family: var(--head-font);
+    line-height: 1.4;
+    text-align: center;
+    font-weight: 100;
+}
+
+.experties {
+    width: 84%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 64px;
 }
 
 .skillContainer {
-    width: 84%;
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 24px;
+    padding-block: 24px;
 }
 
 .skillContainer .tech-card {
     padding: 48px;
-    width: 250px;
+    width: 280px;
     height: 80px;
     font-family: var(--head-font);
     font-size: 1rem;
     border-radius: 8px;
     text-align: center;
-    border: 1px solid var(--color-forth);
+    border: 1px solid var(--color-quaternary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -558,7 +699,7 @@ button:active {
 
 .tech-card p {
     width: 100%;
-    /*  */
+    text-align: center;
 }
 
 /* -----Products Section-- */
@@ -587,7 +728,7 @@ button:active {
     width: 8px;
     height: 8px;
     border-radius: 999px;
-    background-color: var(--secondary);
+    background-color: var(--color-secondary);
 }
 
 
@@ -598,6 +739,8 @@ button:active {
     padding-left: 8px;
     font-family: var(--head-font);
     color: var(--bg-body);
+    position: relative;
+    text-align: center;
 
 }
 
@@ -608,6 +751,7 @@ button:active {
     justify-content: center;
     align-items: center;
     gap: 12px;
+    margin-top: 44px;
 
 }
 
@@ -622,7 +766,7 @@ button:active {
 
 .product hr {
     width: 96%;
-    border-top: 1px solid var(--color-fivth);
+    border-top: 1px solid var(--color-quinary);
     border-bottom: 0;
     border-left: 0;
     border-right: 0;
@@ -634,17 +778,22 @@ button:active {
     width: 100%;
     font-size: clamp(1.8em, 8vw, 3em);
     font-weight: bold;
-    color: var(--secondary);
+    color: var(--bg-body);
     font-family: var(--head-font);
     user-select: none;
+    font-family: var(--font-secondary);
+    text-align: center;
 }
 
 .product-layout .product .product-descp {
     width: 100%;
     font-size: clamp(1em, 1.8vw, 2em);
     text-align: left;
-    color: var(--color-gray);
+    color: var(--color-secondary);
     font-family: var(--head-font);
+    margin-bottom: 8px;
+    font-weight: 200;
+    text-align: center;
 }
 
 .live-btn {
@@ -664,7 +813,7 @@ button:active {
 }
 
 .live-btn i {
-    color: var(--secondary);
+    color: var(--color-secondary);
 }
 
 .imgContainer {
@@ -675,11 +824,7 @@ button:active {
     transition: all 0.3s ease;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
-    gap: 12px;
-    padding: 8px;
-    border: 1px dotted var(--color-fivth);
 }
 
 .imgContainer a {
@@ -702,7 +847,6 @@ button:active {
 }
 
 .imgContainer img {
-    display: block;
     position: relative;
     width: 100%;
     object-fit: cover;
@@ -711,11 +855,11 @@ button:active {
 }
 
 .imgContainer:hover img {
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .imgContainer:hover .live-btn {
-    box-shadow: 16px 16px 64px 5px var(--secondary);
+    box-shadow: 16px 16px 64px 5px var(--color-secondary);
     color: var(--bg-body);
     transform: scale(1);
 }
@@ -754,7 +898,7 @@ button:active {
     gap: 16px;
     margin-bottom: 48px;
     padding-block: 16px;
-
+    transition: all 0.3s ease-in-out;
 }
 
 .gitSec {
@@ -763,21 +907,21 @@ button:active {
     justify-content: space-around;
     align-items: center;
     background-color: var(--my-black);
-    color: var(--secondary);
+    color: var(--color-secondary);
     border-radius: 9999px;
     padding: 16px;
     font-size: 1.4em;
     letter-spacing: 2px;
     font-family: var(--head-font);
-    transition: all 0.2s;
-    border: 1px solid var(--color-fivth);
+    transition: all 0.4s ease-in-out;
+    border: 1px solid var(--color-quinary);
 }
 
 .gitContainer hr {
     width: 40px;
     border-radius: 999px;
-    color: var(--secondary);
-    border-color: var(--secondary);
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
     margin-block: 16px;
 }
 
@@ -787,8 +931,8 @@ button:active {
 
 .gitSec:hover {
     border: 1px solid var(--bg-body);
-    box-shadow: 0px 0px 96px 5px var(--secondary);
-    /* box-shadow: 0px 0px 0px 1px var(--secondary); */
+    box-shadow: 0px 0px 96px 5px var(--color-secondary);
+    /* box-shadow: 0px 0px 0px 1px var(--color-secondary); */
 }
 
 .gitSec img {
@@ -799,8 +943,6 @@ button:active {
 .connectCons i {
     color: var(--bg-body);
 }
-
-
 
 .my-message {
     padding-top: 64px;
@@ -819,7 +961,7 @@ button:active {
     margin: auto;
     margin-block: 24px;
     width: 2px;
-    border: 4px solid var(--secondary);
+    border: 4px solid var(--color-secondary);
     border-radius: 999px;
 }
 
@@ -857,7 +999,7 @@ button:active {
 }
 
 .cons i {
-    color: var(--tertary);
+    color: var(--color-tertiary);
     font-size: 1.4em;
 }
 
@@ -868,14 +1010,14 @@ button:active {
     transform: rotate(90deg);
     background-color: var(--my-black);
     padding: 4px;
-    font-family: var(--font-tertary);
+    font-family: var(--font-tertiary);
     font-style: italic;
-    color: var(--secondary);
+    color: var(--color-secondary);
     text-decoration: none;
     border-radius: 4px;
     width: 112px;
     text-align: center;
-    border: 1px solid var(--color-fivth);
+    border: 1px solid var(--color-quinary);
 }
 
 .back-to-top i {
@@ -899,108 +1041,13 @@ button:active {
 }
 
 .dateObjContainer h3 {
-    font-family: var(--font-tertary);
-    color: var(--tertary);
+    font-family: var(--font-tertiary);
+    color: var(--color-tertiary);
     font-size: 0.8rem;
     letter-spacing: 2px;
     user-select: none;
 }
 
-/* Bottom Navigation */
-.bottom-nav {
-    position: fixed;
-    bottom: 12px;
-    width: 100%;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4px 8px;
-    z-index: 9;
-}
-
-.bottom-nav .icon {
-    width: 52px;
-    height: 52px;
-    padding: 16px;
-    border: 1px solid var(--color-fivth);
-    border-radius: 999px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-black);
-    box-shadow: 0px 0px 48px -2px var(--secondary);
-    cursor: pointer;
-    transition: all 0.2s ease-in;
-}
-
-.bottom-nav .icon i {
-    color: var(--secondary);
-}
-
-.bottom-nav .icon:active {
-    transform: scale(1.3);
-}
-
-/* toggle container */
-#toggleContainer {
-    width: 100%;
-    position: fixed;
-    bottom: 0px;
-    z-index: 4;
-    background-color: transparent;
-    padding: 0px 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(600px);
-    transition: transform 0.2s ease-in-out;
-}
-
-/* hidden toggle Class */
-.hidden-navigation {
-    transform: scale(1) !important;
-
-}
-
-.active-link {
-    background-color: var(--bg-body);
-}
-
-#toggleContainer .toggleIcons {
-    width: 100%;
-    max-width: 340px;
-    border: 2px solid var(--color-fivth);
-    border-bottom: none;
-    border-radius: 12px 12px 0 0;
-    padding: 16px;
-    padding-bottom: 96px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    background-color: var(--my-black);
-}
-
-.toggleIcons a {
-    text-decoration: none;
-    color: var(--secondary);
-    width: 100%;
-    text-align: center;
-    font-family: var(--head-font);
-    font-size: 1em;
-    padding: 16px 24px;
-    border-radius: 8px;
-    transition: all 0.2s ease-in-out;
-    border: 1px solid transparent;
-}
-
-.toggleIcons a:hover {
-    background-color: var(--bg-body);
-    cursor: pointer;
-    font-size: 1.01em;
-}
 
 /* ----------Media Query */
 @media screen and (max-width:768px) {
@@ -1117,7 +1164,7 @@ button:active {
 .loader .circle:nth-child(1) {
     top: 0;
     left: 0;
-    background-color: var(--secondary);
+    background-color: var(--color-secondary);
 }
 
 .loader .circle:nth-child(2) {
@@ -1136,7 +1183,7 @@ button:active {
 .loader .circle:nth-child(4) {
     bottom: 0;
     right: 0;
-    background-color: var(--secondary);
+    background-color: var(--color-secondary);
 }
 
 @keyframes spin988 {
@@ -1187,4 +1234,21 @@ button:active {
 .animatedd-element.animated-second {
     opacity: 1;
     transform: scale(1);
+}
+
+/* Track */
+::-webkit-scrollbar {
+    width: 4px; /* Width of the entire scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--color-secondary); /* Color of the scrollbar handle */
+    /* border: 1px solid var(--color-black); */
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent; /* Color of the scrollbar track */
 }
