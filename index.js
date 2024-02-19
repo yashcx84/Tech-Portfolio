@@ -1,7 +1,7 @@
 // Date Object
 let output = document.getElementById("date-obj");
 let mydate = new Date();
-output.innerHTML = "Buildx" + "@" + mydate.getFullYear();
+output.innerHTML = "Build" + "@" + mydate.getFullYear();
 
 
 const blurObj = document.getElementsByClassName('blur');

@@ -17,71 +17,69 @@
 
 <body>
     <!-- Navigation -->
-    <header class="navContainer">
+    <section class="bottom-nav">
+        <div class="icon" id="toggleBtn">
+            <i class="fa-solid fa-bars" id="ham-icon"></i>
+        </div>
+    </section>
+    <section id="toggleContainer">
+        <div class="toggleIcons">
+            <a href="#home">🍙 HOME</a>
+            <a href="#about">📸 STORY</a>
+            <a href="#technologies">🤿 EXPERTISE</a>
+            <a href="#projects">🔮 PRODUCTS</a>
+        </div>
+    </section>
+    <header class="navContainer blur">
         <nav>
             <div class="leftNav">
                 <img src="Avatar-rmv.png" alt="My Image Model">
             </div>
             <div class="rightNav">
-                <a href="resume024.pdf" download="resume024.pdf" class="resume">
-                    Resume <i class="fa-solid fa-arrow-up-long"></i>
+                <a href="resume024.pdf" id="navbtns" download="resume024.pdf" class="resume ">
+                    RESUME <i class="fa-solid fa-arrow-up-long"></i>
                 </a>
-                <a class="contact" href="https://wa.me//6350229611">
-                    Contact
+                <a class="contact" id="navbtns" href="https://wa.me//6350229611">
+                    CONTACT
                 </a>
             </div>
-        </nav> 
-        <section class="bottom-nav">
-            <div class="icon" id="toggleBtn">
-                <i class="fa-solid fa-bars" id="ham-icon"></i>
-            </div>
-        </section>
-        <section id="toggleContainer">
-            <div class="toggleIcons">
-                <a href="#home">🍙 Home</a>
-                <a href="#about">📸 Story</a>
-                <a href="#technologies">🤿 Experties</a>
-                <a href="#projects">🔮 Products</a>
-            </div>
-        </section>
+        </nav>
     </header>
-
+    
     <!-- Main Section -->
     <section class="main blur" id="home">
         <div class="left">
+
             <div class="dot">
 
             </div>
             <h3 class="headline" id="user-select">
-                Welcome, to my Port!
+                WELCOME! TO MY PORT
             </h3>
-            <h1 id="nameHead">Y<span>a</span><span>s</span><span>h</span>
-                <span>J</span><span>a</span><span>n</span><span>g</span><span>i</span><span>d</span>
-            </h1>
-
-            <p class="head-description" id="user-select">
-                Specialize in creating <span style="color: var(--my-black);">clean and engaging content </span>that
-                effectively communicates the message. With a
-                focus on <span style="color: var(--my-black);">simplicity & clarity.</span>
-            </p>
+            <div class="info">
+                <h1 id="nameHead"><span>Y</span><span>a</span><span>s</span><span>h</span>
+                    <span>J</span><span>a</span><span>n</span><span>g</span><span>i</span><span>d</span>
+                </h1>
+                <p class="head-description" id="user-select">
+                    DEVELOPER <span style="color: var(--color-secondary);">&</span> DESIGNER
+                </p>
+            </div>
             <div class="Con-buttons">
+                <div class="app-icons">
+                    <a href="https://github.com/yashcx84" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/yashjangidd/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/yashcx84_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
                 <a class="btn" id="mail-btn" href="mailto:yashcx84@gmail.com" target="_blank">⋫<span
                         style="color: var(--bg-body);"> Let's Talk </span>
                     ⋪</a>
             </div>
         </div>
-        <div class="right">
-            <a class="msg-dot" href="https://wa.me//6350229611">
-                <i class="fa-solid fa-comments"></i>
-            </a>
-            <div class="img-holder">
-                <img id="myImg" src="myImg.png" alt="My Profile Image">
-            </div>
-        </div>
     </section>
 
     <!-- About Section -->
-    <section class="aboutSec  blur" id="about">
+    <section class="aboutSec  blur black-background" id="about">
         <h3>
             STORY
             <hr>
@@ -89,25 +87,20 @@
         <div class="story-container">
             <div class="story-insider">
                 <h1 class="animated-element">
-                    Design<span style="color: var(--color-secondary); font-size: 0.21em;">PLUS</span> Technology
+                    DESIGN <span style="color: var(--color-secondary); font-size: 0.21em;">PLUS</span> TECH
                 </h1>
-                <h4 class="animated-element">I merge both fields for Digital Experiences that bring delight<span
-                        style="color: var(--color-secondary);">.</span></h4>
                 <p class="animated-element">
-                    <span style="color: var(--color-secondary);">*</span> Since 2021
+                    SINCE 2021
                 </p>
+                <h3 class="animated-element">I specialize in creating clean and engaging content that effectively
+                    communicates the message, with a focus of simplicity and clarity. By seamlessly merging the fields
+                    of technology and design, I ensure that the end result is not only visually appealing but also
+                    intuitive and user-friendly. Whether it's designing a user interface, developing a website, or
+                    crafting multimedia content, my approach is rooted in the belief that simplicity and clarity are
+                    paramount for a successful digital experience<span style="color: var(--color-secondary);">.</span>
+                </h3>
             </div>
-            <div class="stories">
-                <div class="story story02 animated-element">
-                    <p>Blending creativity and technical prowess, I meticulously design <span style="color: var(--color-secondary);">user-centric web content</span>and solidifying as a adaptable web developer in the digital landscape.
-                           </p>
-                    <div class="sphare sphare02"></div>
-                </div>
-                <div class="story story01 animated-element">
-                    <p>As a web developer, I specialize in <span style="color: var(--bg-body);">creating elegant and user-friendly web content</span>, focusing on simple yet impactful design principles to engage audiences effectively.</p>
-                    <div class="sphare sphare01"></div>
-                </div>
-            </div>
+        </div>
         </div>
     </section>
 
@@ -118,32 +111,42 @@
             <hr>
         </h3>
         <div class="experties">
-            <h2>Web Development</h2>
-            <h4>Web Development with Seamless Design Integration</h4>
-            <div class="skillContainer">
-                <div class="tech-card animatedd-element">
-                    <img src="js.png" alt="JavaScript Logo">
-                    <p>JavaScript</p>
-                </div>
-                <div class="tech-card animatedd-element">
-                    <img src="React.png" alt="ReactJs Logo">
-                    <p>ReactJs</p>
-                </div>
-                <div class="tech-card animatedd-element">
-                    <img src="node.png" alt="NodeJs Logo">
-                    <p>NodeJs</p>
-                </div>
-                <div class="tech-card animatedd-element">
-                    <img src="tailwind-logo" alt="TailwindCss Logo">
-                    <p>TailwindCss</p>
-                </div>
-                <div class="tech-card animatedd-element">
-                    <img src="bootstrap.png" alt="Bootstrap Logo">
-                    <p>Bootstrap</p>
-                </div>
-                <div class="tech-card animatedd-element">
-                    <img src="figma.png" alt="Figma Logo">
-                    <p>Figma</p>
+            <div class="expertie">
+                <h1>Web dev</h1>
+                <h4>Web Development with Seamless Design Integration</h4>
+                <div class="skillContainer">
+                    <div class="tech-card animatedd-element">
+                        <img src="html-logo.png" alt="HTML  Logo">
+                        <p>HTML</p>
+                    </div>
+                    <div class="tech-card animatedd-element">
+                        <img src="css-logo.png" alt="CSS Logo">
+                        <p>CSS</p>
+                    </div>
+                    <div class="tech-card animatedd-element">
+                        <img src="js.png" alt="JavaScript Logo">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="tech-card animatedd-element">
+                        <img src="React.png" alt="ReactJs Logo">
+                        <p>ReactJs</p>
+                    </div>
+                    <div class="tech-card animatedd-element">
+                        <img src="tailwind-logo.png" alt="TailwindCss Logo">
+                        <p>TailwindCss</p>
+                    </div>
+                    <div class="tech-card animatedd-element">
+                        <img src="node.png" alt="NodeJs Logo">
+                        <p>NodeJs</p>
+                    </div>
+                    <div class="tech-card animatedd-element">
+                        <img src="bootstrap.png" alt="Bootstrap Logo">
+                        <p>Bootstrap</p>
+                    </div>
+                    <div class="tech-card animatedd-element">
+                        <img src="figma.png" alt="Figma Logo">
+                        <p>Figma</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -157,42 +160,42 @@
         </h3>
         <div class="product-layout">
             <div class="product animated-element">
-                <h2>GhostCedmics</h2>
+                <h1><span>01</span>GhostCed</h1>
                 <p class="product-descp">Academic website tailored with Tailwind CSS</p>
                 <div class="imgContainer">
                     <img src="Product01.jpg" alt="Product Image">
                     <a href="https://yashcx84.github.io/Ghostmics_Web/" target="_blank">
-                        <p class="live-btn">Live <i class="fa-solid fa-arrow-right-long"></i></p>
+                        <button class="live-btn">Live <i class="fa-solid fa-arrow-right-long"></i></button>
                     </a>
                 </div>
             </div>
             <div class="product animated-element">
-                <h2>MeowMart</h2>
+                <h1><span>02</span>MeowMart</h1>
                 <p class="product-descp">Bootstrap-powered marketplace for cat lovers</p>
                 <div class="imgContainer">
                     <img src="product02.jpg" alt="Product Image">
                     <a href="https://yashcx84.github.io/Cat-Web/" target="_blank">
-                        <p class="live-btn">Live <i class="fa-solid fa-arrow-right-long"></i></p>
+                        <button class="live-btn">Live <i class="fa-solid fa-arrow-right-long"></i></button>
                     </a>
                 </div>
             </div>
             <div class="product animated-element">
-                <h2>Stand&Pin</h2>
+                <h1><span>03</span>Stand&Pin</h1>
                 <p class="product-descp">To-Do list powered by React, Next.js</p>
                 <div class="imgContainer">
                     <img src="Product03.jpg" alt="Product Image">
                     <a href="https://pinout-yas-projects-e0ca31c4.vercel.app/" target="_blank">
-                        <p class="live-btn">Live <i class="fa-solid fa-arrow-right-long"></i></p>
+                        <button class="live-btn">Live <i class="fa-solid fa-arrow-right-long"></i></button>
                     </a>
                 </div>
             </div>
             <div class="product animated-element">
-                <h2>Airbnb Clone</h2>
+                <h1><span>04</span>Airbnb Clone</h1>
                 <p class="product-descp">Airbnb Application Clone Built with ReactJS</p>
                 <div class="imgContainer">
                     <img src="Product04.PNG" alt="Product Image">
                     <a href="https://airbnb-app-clone-omega.vercel.app/" target="_blank">
-                        <p class="live-btn">Live <i class="fa-solid fa-arrow-right-long"></i></p>
+                        <button class="live-btn">Live <i class="fa-solid fa-arrow-right-long"></i></button>
                     </a>
                 </div>
             </div>
@@ -215,7 +218,7 @@
 
     <!-- Footer Section -->
     <div class="my-message  blur">
-        <h2 class="animated-element">Thanks! Your visit is greatly appreciated.</h2>
+        <p class="animated-element">You're welcome! Your visit is greatly appreciated and valued.</p>
         <hr>
     </div>
 
@@ -223,14 +226,14 @@
     <footer class="avatar  blur" id="connect" class="animated-element">
         <img src="Avatar-rmv.png" alt="My Image Model">
         <div class="circle-structure">
-            <div class="cons">
+            <!-- <div class="cons">
                 <a href="https://github.com/yashcx84" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/yashjangidd/" target="_blank"><i
                         class="fa-brands fa-linkedin-in"></i></a>
                 <a href="https://www.instagram.com/yashcx84_/" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
+            </div> -->
             <div class="dateObjContainer">
-                <h3 id="date-obj"></h3>
+                <p id="date-obj"></p>
             </div>
         </div>
         <a class="back-to-top" href="#home">
