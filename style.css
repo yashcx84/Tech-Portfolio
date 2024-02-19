@@ -20,7 +20,7 @@
     --color-quinary: #d1d1d173;
     --color-shadow: #05c25796;
     --color-blast: #ff0000;
-    --color-black: #232223;
+    --color-black: #1b1b1b;
     --color-gray: #b9b9b980;
     --toggle-btn: #eeeeee73;
 }
@@ -55,7 +55,7 @@ header {
     border-radius: 12px;
     font-family: var(--head-font);
     transition: all 0.6s;
-    background-color: var(--color-black);
+    background-color: var(--text-black);
     width: 480px;
     border: 1px solid var(--color-gray);
 }
@@ -100,7 +100,7 @@ header {
     cursor: pointer;
     transition: all 0.8s ease-in;
     border: 2px solid var(--color-quinary);
-    background-color: var(--color-black);
+    background-color: var(--text-black);
 }
 
 .bottom-nav i {
@@ -1062,6 +1062,9 @@ button:active {
         /* top: px; */
         left: 68px;
     }
+    .main {
+        height: 100vh;
+    }
     .info {
         width: 100%;
         margin-bottom: 44px;
@@ -1071,7 +1074,7 @@ button:active {
         font-size: 1.2em;
     }
     #nameHead {
-        font-size: 3em;
+        font-size: 2.6em;
         width: 100%;
         /* padding-block: 16px; */
         margin-bottom: 16px;
