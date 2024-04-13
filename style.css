@@ -1031,7 +1031,7 @@ button:active {
     }
 
     .main {
-        height: 130vh;
+        height: 100vh;
     }
 
     .main .row,
@@ -1039,22 +1039,6 @@ button:active {
     .todoSec .row,
     .productSec .row {
         width: 88%;
-    }
-
-    .main .row .headline {
-        text-align: center;
-    }
-
-    .main .row .head-description:nth-child(4) {
-        text-align: center;
-    }
-
-    .main .row .head-description:nth-child(5) {
-        text-align: center;
-    }
-
-    .main .row #nameHead {
-        text-align: center;
     }
 
     .main .Con-buttons {
@@ -1091,9 +1075,6 @@ button:active {
         width: 100%;
     }
 
-    .dot {
-        display: none;
-    }
 
 
 }
