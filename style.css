@@ -42,7 +42,7 @@ header {
     margin: auto;
     position: fixed;
     top: 8px;
-    z-index: 8;
+    z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +55,7 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: 12px;
-    border-radius: 12px;
+    border-radius: 999px;
     font-family: var(--head-font);
     transition: all 0.6s;
     background-color: var(--text-black);
@@ -63,28 +63,18 @@ header {
     border: 1px solid var(--color-gray);
 }
 
-.notify-dot {
-    position: absolute;
-    top: 12px;
-    right: 16px;
-    width: 7px;
-    height: 7px;
-    background-color: var(--color-secondary);
-    border-radius: 999px;
-}
-
 /* Bottom Navigation */
 .bottom-nav {
-    position: fixed;
-    bottom: 8px;
-    left: 8px;
+    /* position: fixed;
+    top: 8px;
+    right: 8px; */
     /* transform: translate(-50%, -50%); */
     width: 64px;
     height: 64px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 999 !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,7 +125,6 @@ header {
     transform: scale(0) translateY(1400px);
     transition: transform 0.45s ease-in-out;
     flex-direction: column;
-    /* border-radius: 24px 24px 0 0; */
 }
 
 /* hidden toggle Class */
@@ -149,7 +138,7 @@ header {
 }
 
 #toggleContainer .toggleIcons {
-    width: 480px;
+    width: 580px;
     padding: 44px;
     border-radius: 24px;
     display: flex;
@@ -247,7 +236,7 @@ nav .leftNav {
 .main {
     margin: auto;
     padding-block: 96px;
-    padding-top: 164px;
+    padding-top: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -265,16 +254,6 @@ nav .leftNav {
     gap: 16px;
 }
 
-.main .row .dot {
-    position: absolute;
-    top: -16px;
-    left: -16px;
-    width: 24px;
-    height: 24px;
-    background-color: var(--color-secondary);
-    border-radius: 999px;
-}
-
 .main .row .headline {
     width: 100%;
     font-family: var(--head-font);
@@ -284,15 +263,19 @@ nav .leftNav {
     font-family: var(--font-tertiary);
     font-style: italic;
     transform: translateX(-300px);
+    text-align: center;
+    margin-bottom: 24px;
 }
 
 .main .row #nameHead {
     width: 100%;
-    font-size: clamp(4em, 10vw, 12em);
+    font-size: clamp(3em, 10vw, 12em);
     color: var(--text-black);
     user-select: none;
-    font-family: var(--head-font);
-    /* letter-spacing: 8px; */
+    font-family: var(--font-secondary);
+    text-align: center;
+    text-transform: uppercase;
+    /* margin-block: 16px; */
 }
 
 .main .row #nameHead span:hover {
@@ -308,22 +291,24 @@ nav .leftNav {
 }
 
 .main .row .head-description:nth-child(4) {
-    width: 100%;
     margin: auto;
     color: var(--text-black);
     font-family: var(--head-font);
     font-size: clamp(0.4em, 5vw, 3em);
-    text-align: right;
+    padding: 12px 16px;
     background-color: var(--color-black);
     color: var(--bg-body);
+    /* margin-bottom: 24px; */
 }
+
 .main .row .head-description:nth-child(5) {
     width: 100%;
     margin: auto;
     color: var(--text-black);
-    font-family: var(--font-secondary);
+    font-family: var(--head-font);
     font-size: clamp(1.2em, 1.8vw, 2em);
-    margin-block: 24px;
+    margin-bottom: 24px;
+    text-align: center;
 }
 
 .main .row .head-description span {
@@ -364,10 +349,21 @@ nav .leftNav {
 .Con-buttons {
     width: 100%;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
-    gap: 48px;
+    gap: 24px;
     flex-wrap: wrap-reverse;
+}
+.Con-buttons .head-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.Con-buttons .head-buttons a:last-child {
+    background-color: var(--color-primary) !important;
+    border: 1px solid var(--color-black);
+    color: var(--color-secondary) !important;
+    position: relative;
 }
 
 .Con-buttons #mail-button {
@@ -375,7 +371,7 @@ nav .leftNav {
     color: var(--color-secondary);
     border-radius: 8px;
     font-size: 1.2rem;
-    width: 215px;
+    /* width: 250px; */
     text-decoration: none;
     transition: all 0.3s;
     text-align: center;
@@ -383,11 +379,30 @@ nav .leftNav {
     cursor: url('cursor.png');
     user-select: none;
     padding: 32px 44px;
+    border: 1px solid var(--color-black);
 }
-
-.Con-buttons #mail-button:hover {
+.Con-buttons #mail-button:last-child:hover {
+    background-color: var(--color-black) !important;
+}
+.Con-buttons #mail-button:last-child p{
     background-color: var(--color-secondary);
-    color: var(--text-black);
+    color: var(--color-black);
+    width: 144px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 50%;
+    left: 70%;
+    opacity: 0;
+    transform: translateX(-12px);
+    transition: all 0.15s ease-in-out;
+}
+.Con-buttons #mail-button:last-child:hover p{
+    opacity: 1;
+    transform: translateX(0px);
+}
+.Con-buttons #mail-button:first-child:hover {
+    box-shadow: 0 0 0 5px var(--color-secondary);
 }
 
 .Con-buttons .app-icons {
@@ -453,7 +468,7 @@ button:active {
 .aboutSec h3 {
     width: 100%;
     font-size: 1.8em;
-    margin-bottom: 24px;
+    margin-bottom: 84px;
     font-family: var(--head-font);
     color: var(--bg-body);
     position: relative;
@@ -683,7 +698,7 @@ button:active {
 .productSec h3 {
     width: 100%;
     font-size: 1.8em;
-    margin-bottom: 36px;
+    margin-bottom: 84px;
     font-family: var(--head-font);
     color: var(--bg-body);
     position: relative;
@@ -933,6 +948,7 @@ button:active {
     /* margin: auto; */
     width: 100%;
 }
+
 .avatar .row {
     width: 84%;
     display: flex;
@@ -994,17 +1010,35 @@ button:active {
 
 /* ----------Media Query */
 @media screen and (max-width:768px) {
+    header {
+        top: 0;
+        background-color: var(--text-black);
+    }
+
+    .navContainer nav {
+        width: 100%;
+        border: none;
+    }
+
+    .bottom-nav .icon {
+        border: none;
+        padding-inline: 44px;
+    }
 
     /* ---Main Section---- */
     .dot {
         left: 68px;
     }
 
+    .main {
+        height: 130vh;
+    }
+
     .main .row,
     .aboutSec .row,
     .todoSec .row,
     .productSec .row {
-        width: 94%;
+        width: 88%;
     }
 
     .main .row .headline {
@@ -1014,6 +1048,7 @@ button:active {
     .main .row .head-description:nth-child(4) {
         text-align: center;
     }
+
     .main .row .head-description:nth-child(5) {
         text-align: center;
     }
@@ -1040,6 +1075,9 @@ button:active {
     .navContainer nav {
         width: 94%;
     }
+    .Con-buttons .head-buttons{
+        width: 100%;
+    }
 
     .Con-buttons .app-icons {
         width: 64%;
@@ -1047,6 +1085,10 @@ button:active {
         justify-content: center;
         align-items: center;
         gap: 8px;
+    }
+
+    .Con-buttons #mail-button {
+        width: 100%;
     }
 
     .dot {
@@ -1065,9 +1107,17 @@ button:active {
     top: 0;
     z-index: 9999;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-body);
+    background-color: var(--color-black);
+}
+
+.loaderContainer h1 {
+    margin-top: 44px;
+    color: var(--color-primary);
+    font-family: var(--head-font);
+    letter-spacing: 2px;
 }
 
 .loader {
@@ -1076,7 +1126,7 @@ button:active {
     height: var(--dim);
     position: relative;
     animation: spin988 2s linear infinite;
-    background-color: var(--bg-body);
+    background-color: var(--color-black);
 }
 
 .loader .circle {
@@ -1098,13 +1148,13 @@ button:active {
 .loader .circle:nth-child(2) {
     top: 0;
     right: 0;
-    background-color: var(--color-black);
+    background-color: var(--color-primary);
 }
 
 .loader .circle:nth-child(3) {
     bottom: 0;
     left: 0;
-    background-color: var(--color-black);
+    background-color: var(--color-primary);
 
 }
 
@@ -1116,7 +1166,7 @@ button:active {
 
 @keyframes spin988 {
     0% {
-        transform: scale(1.4) rotate(0);
+        transform: rotate(0);
     }
 
     20%,
@@ -1126,7 +1176,7 @@ button:active {
 
     45%,
     50% {
-        transform: scale(1.4) rotate(180deg);
+        transform: rotate(180deg);
     }
 
     70%,
@@ -1136,7 +1186,7 @@ button:active {
 
     95%,
     100% {
-        transform: scale(1.4) rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -1144,7 +1194,7 @@ button:active {
 .animated-element {
     opacity: 0;
     transform: translateY(120px);
-    transition: opacity 1s, transform 1s;
+    transition: opacity 0.6s, transform 0.6s;
 }
 
 /* Define the animated state of the elements */
@@ -1156,7 +1206,7 @@ button:active {
 .animatedd-element {
     opacity: 0;
     transform: scale(0);
-    transition: opacity 1s, transform 1s;
+    transition: opacity 0.6s, transform 0.6s;
 }
 
 .animatedd-element.animated-second {

@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Restore scrolling
         document.body.style.overflow = "auto";
-    }, 3000);
+    }, 5000);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
