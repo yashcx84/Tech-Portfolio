@@ -30,6 +30,7 @@
 
 body {
     background-color: var(--bg-body);
+    overflow: hidden;
 }
 
 body img {
@@ -65,10 +66,6 @@ header {
 
 /* Bottom Navigation */
 .bottom-nav {
-    /* position: fixed;
-    top: 8px;
-    right: 8px; */
-    /* transform: translate(-50%, -50%); */
     width: 64px;
     height: 64px;
     display: flex;
@@ -446,7 +443,7 @@ button:active {
     align-items: center;
     justify-content: center;
     background-color: var(--color-black);
-    padding-block: 64px;
+    padding-top: 96px;
 }
 
 .aboutSec hr,
@@ -564,7 +561,7 @@ button:active {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-block: 96px;
+    padding-top: 96px;
 }
 
 .todoSec .row {
@@ -686,7 +683,7 @@ button:active {
     justify-content: center;
     align-items: center;
     background-color: var(--color-black);
-    padding-block: 84px;
+    padding-top: 96px;
     overflow: hidden;
 }
 
@@ -1026,14 +1023,6 @@ button:active {
     }
 
     /* ---Main Section---- */
-    .dot {
-        left: 68px;
-    }
-
-    .main {
-        height: 100vh;
-    }
-
     .main .row,
     .aboutSec .row,
     .todoSec .row,
