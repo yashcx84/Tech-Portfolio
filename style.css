@@ -714,7 +714,7 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     gap: 24px;
     padding-bottom: 44px;
     border-bottom: 1px solid var(--color-gray);
