@@ -159,7 +159,7 @@ nav .leftNav {
     padding: 12px;
     border-radius: 8px;
     transition: all 0.1s ease-in;
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--color-primary);
 }
 
