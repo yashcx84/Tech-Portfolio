@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     top: targetSection.offsetTop,
                     behavior: "smooth"
                 });
-                
+
             }
             toggleContainer.classList.remove('show-navigation');
             for (let i = 0; i < blurObj.length; i++) {
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Restore scrolling
         document.body.style.overflow = "auto";
-    }, 1000);
+    }, 3000);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -150,3 +150,19 @@ gsap.to(".headline", {
     x: 0,
 });
 
+
+
+// toggle dark mode 
+const body = document.body
+
+const tglThemeBtn = document.getElementById("tglThemeBtn")
+
+tglThemeBtn.addEventListener("click", () => {
+    body.classList.toggle("dark-mode")
+    if (body.classList.contains("dark-mode")) {
+        tglThemeBtn.innerText = "👓";
+    }
+    else {
+        tglThemeBtn.innerText = "🎃";
+    }
+})

@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Space+Grotesk:wght@500&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-body: #fffbfb;
+    --bg-body2: #fcfcfc;
+    --head-font: 'Space Grotesk', sans-serif;
+    --font-tertiary: 'Orbitron', sans-serif;
+    --font-secondary: "Josefin Sans", sans-serif;
+    --font-para: "Mukta", sans-serif;
+    --text-black: #111111;
+    --color-primary: #fffbfb;
+    --color-secondary: #00ff6ef5;
+    --color-tertiary: #afafaf;
+    --color-quaternary: #b3b3b3;
+    --color-quinary: #d1d1d173;
+    --color-shadow: #05c25796;
+    --color-blast: #ff0000;
+    --color-black: #1b1b1b;
+    --color-gray: #b9b9b980;
+    --toggle-btn: #eeeeee73;
+}
+
+.dark-mode {
+    --bg-body: #1b1b1b;
+    /* Background */
+    --bg-body2: #111111;
+    /* Secondary Background */
+    --head-font: 'Space Grotesk', sans-serif;
+    /* Headings Font */
+    --font-tertiary: 'Orbitron', sans-serif;
+    /* Tertiary Font */
+    --font-secondary: "Josefin Sans", sans-serif;
+    /* Secondary Font */
+    --font-para: "Mukta", sans-serif;
+    /* Paragraph Font */
+    --text-black: #ffffff;
+    /* Text color */
+    --color-primary: #1b1b1b;
+    /* Primary color */
+    --color-secondary: #00ff6ef5;
+    /* Secondary color */
+    --color-tertiary: #afafaf;
+    /* Tertiary color */
+    --color-quaternary: #b3b3b3;
+    /* Quaternary color */
+    --color-quinary: #d1d1d173;
+    /* Quinary color */
+    --color-shadow: #05c25796;
+    /* Shadow color */
+    --color-blast: #ff0000;
+    /* Blast color */
+    --color-black: #ffffff;
+    /* Black color */
+    --color-gray: #b9b9b980;
+    /* Gray color */
+    --toggle-btn: #eeeeee73;
+    /* Toggle button color */
+}
+
+
+body {
+    background-color: var(--bg-body);
+    overflow: hidden;
+    cursor: url('cursor.png') auto;
+}
+
+body img {
+    pointer-events: none;
+}
