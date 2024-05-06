@@ -19,9 +19,8 @@ header {
     padding: 12px;
     border-radius: 999px;
     font-family: var(--head-font);
-    transition: all 0.6s;
     background-color: var(--text-black);
-    width: 480px;
+    width: 430px !important;
     border: 1px solid var(--color-gray);
 }
 
@@ -36,7 +35,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .bottom-nav .icon {
@@ -61,10 +59,6 @@ header {
 
 .bottom-nav #toggleBtn:active {
     transform: scale(0.75);
-}
-
-.dimmed {
-    filter: blur(28px) !important;
 }
 
 
@@ -128,6 +122,29 @@ header {
     cursor: pointer;
 }
 
+#resumeBtn {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: var(--color-black);
+    text-align: center;
+    color: var(--color-secondary);
+    border: 1px solid var(--color-quinary);
+    border-radius: 16px;
+    display: none;
+}
+
+.btnRmv {
+    display: flex !important;
+}
+
+#resumeBtn button {
+    width: 100%;
+    color: var(--color-primary);
+    font-size: 0.75em;
+    font-family: var(--head-font);
+}
+
 nav .leftNav {
     display: flex;
     align-items: center;
@@ -137,11 +154,10 @@ nav .leftNav {
 }
 
 .leftNav img {
-    width: 4rem;
+    width: 3.8rem;
     border-radius: 999px;
     user-select: none;
-    border: 2px solid var(--color-quinary);
-    background-color: var(--bg-body);
+    background-color: var(--color-quinary);
     backdrop-filter: blur(16px);
 }
 
@@ -151,6 +167,7 @@ nav .leftNav {
     justify-content: center;
     align-items: center;
     gap: 8px;
+    position: relative;
 }
 
 .rightNav a {
@@ -160,6 +177,7 @@ nav .leftNav {
     transition: all 0.1s ease-in;
     font-size: 0.95rem;
     color: var(--color-primary);
+    cursor: pointer;
 }
 
 nav button {
@@ -168,17 +186,21 @@ nav button {
     padding: 12px;
     background-color: var(--color-black);
     border-radius: 999px;
-    transition: all 0.35s ease-in-out;
+    transition: all 0.25s ease-in-out;
     font-size: 1.3em;
     cursor: pointer;
     overflow: hidden;
     display: flex;
-align-items: center;
+    align-items: center;
     justify-content: center;
 }
 
 nav button:active {
-    transform: scale(1.2);
+    transform: rotate(-90deg);
+}
+
+#tglThemeBtn {
+    color: var(--color-primary);
 }
 
 .contact {
@@ -203,98 +225,172 @@ nav button:active {
     transform: rotate(240deg);
 }
 
-.rightNav a:hover {
+.rightNav > a:hover {
     color: var(--text-black);
     background-color: var(--bg-body);
 }
-
+.rightNav #resumeBtn a:hover {
+    filter: brightness(0.8);
+}
 .main {
     margin: auto;
-    height: 110vh;
+    width: 100%;
+    background-color: var(--color-light);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-body);
-    padding-block: 96px;
 }
 
 .main .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 104px;
+    flex-wrap: wrap-reverse;
+    gap: 24px;
     width: 84%;
+    padding-top: 116px;
+}
+
+.main .rowcontent {
+    flex: 1.5 500px;
     position: relative;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 24px;
+    gap: 18px;
 }
 
-.main .row .headline {
+.main .rowcontent .headline {
     width: 100%;
     font-family: var(--head-font);
-    color: var(--color-black);
+    color: var(--color-secondary);
     padding: 2px;
     font-size: clamp(0.2em, 0vw + 4vw, 1.6em);
-    font-family: var(--font-tertiary);
-    font-style: italic;
-    transform: translateX(-300px);
-    text-align: center;
-}
-
-.main .row h1 {
-    width: 100%;
-    font-size: clamp(3em, 10vw, 12em);
-    color: var(--text-black);
-    user-select: none;
-    font-family: var(--font-secondary);
+    font-family: var(--head-font);
     text-align: center;
     text-transform: uppercase;
-    color: var(--color-black);
-    background: linear-gradient(180deg, var(--text-black), var(--color-tertiary));
+
+}
+
+.main .rowcontent h1,
+.main .rowcontent p,
+.main .rowcontent h3 {
+    text-align: left !important;
+}
+
+
+.main .rowcontent h1 {
+    width: 100%;
+    white-space: nowrap;
+    font-size: clamp(4.5em, 8vw, 11em);
+    user-select: none;
+    font-family: var(--head-font);
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, var(--text-black), var(--color-primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: textGradient 5s infinite alternate;
+    letter-spacing: -8px;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: bolder;
 }
 
-
-
-.main .row .head-description:nth-child(4) {
-    margin: auto;
-    color: var(--text-black);
-    font-family: var(--head-font);
-    font-size: clamp(0.4em, 5vw, 3em);
-    padding: 12px 16px;
-    background-color: var(--color-black);
-    color: var(--bg-body);
-    /* margin-bottom: 24px; */
-}
-
-.main .row .head-description:nth-child(5) {
+.main .rowcontent .head-description:nth-child(2) {
     width: 100%;
-    margin: auto;
     color: var(--text-black);
-    font-family: var(--head-font);
-    font-size: clamp(1.2em, 1.8vw, 2em);
-    margin-bottom: 24px;
-    text-align: center;
+    font-family: var(--font-secondary);
+    font-size: clamp(2em, 4vw, 2.5em);
+    /* background-color: var(--color-black); */
+    color: var(--color-black);
+    text-transform: uppercase;
 }
 
-.main .row .head-description span {
-    user-select: none;
+.main .rowcontent .head-description:nth-child(4) {
+    width: 100%;
+    color: var(--color-black);
+    font-family: var(--font-para);
+    font-size: clamp(1.2em, 1.8vw, 2em);
+    margin-bottom: 16px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.main .rowcontent .head-description:nth-child(4) span {
+    color: var(--color-secondary);
+}
+.main .rowcontent .head-description:nth-child(2) span {
     color: var(--color-secondary);
     font-weight: bold;
+    font-family: var(--head-font);
 }
 
-.main .row #nameHead::selection {
+.main .rowcontent #nameHead::selection {
     color: var(--color-secondary);
 }
 
-.main .row .headline::selection {
+.main .rowcontent .headline::selection {
     color: var(--color-secondary);
 }
 
-.main .row .head-description::selection {
+.main .rowcontent .head-description::selection {
     color: var(--text-black);
+}
+
+.main .rowimg {
+    flex: 1 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .rowimg a {
+    text-decoration: none;
+    position: absolute;
+    overflow: hidden;
+    top: 28px;
+    right: 28px;
+    width: 64px;
+    background-color: var(--color-secondary);
+    border: none;
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-family: var(--head-font);
+    font-size: 1.2em;
+    white-space: nowrap;
+    box-shadow: 0 20px 24px var(--color-shadow);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    color: var(--color-black);
+    align-items: center;
+    gap: 8px;
+}
+
+.rowimg a span {
+    opacity: 0;
+}
+
+.rowimg a:hover {
+    width: 164px;
+}
+
+.rowimg a:hover span {
+    opacity: 1;
+}
+
+.rowimg .profileimg {
+    position: relative;
+}
+
+.rowimg img {
+    width: 24em;
+    border-radius: 999px;
+    background-color: var(--color-quinary);
+    padding: 12px;
 }
 
 
@@ -317,66 +413,11 @@ nav button:active {
 .Con-buttons {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 24px;
-    flex-wrap: wrap-reverse;
-}
-
-.Con-buttons .head-buttons {
-    display: flex;
     flex-wrap: wrap;
-    gap: 16px;
-}
 
-.Con-buttons .head-buttons a:last-child {
-    background-color: var(--color-primary) !important;
-    border: 1px solid var(--color-black);
-    color: var(--color-secondary) !important;
-    position: relative;
-}
-
-.Con-buttons #mail-button {
-    background-color: var(--text-black);
-    color: var(--color-secondary);
-    border-radius: 8px;
-    font-size: 1.2rem;
-    /* width: 250px; */
-    text-decoration: none;
-    transition: all 0.3s;
-    text-align: center;
-    font-family: var(--head-font);
-    cursor: url('cursor.png');
-    user-select: none;
-    padding: 32px 44px;
-    border: 1px solid var(--color-black);
-}
-
-.Con-buttons #mail-button:last-child:hover {
-    background-color: var(--color-black) !important;
-}
-
-.Con-buttons #mail-button:last-child p {
-    background-color: var(--color-secondary);
-    color: var(--color-black);
-    width: 144px;
-    padding: 4px 6px;
-    border-radius: 4px;
-    position: absolute;
-    bottom: 50%;
-    left: 70%;
-    opacity: 0;
-    transform: translateX(-12px);
-    transition: all 0.15s ease-in-out;
-}
-
-.Con-buttons #mail-button:last-child:hover p {
-    opacity: 1;
-    transform: translateX(0px);
-}
-
-.Con-buttons #mail-button:first-child:hover {
-    box-shadow: 0 0 0 5px var(--color-secondary);
 }
 
 .Con-buttons .app-icons {
@@ -445,7 +486,7 @@ button:active {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-black);
+    background-color: var(--color-second);
     padding-top: 96px;
 }
 
@@ -552,6 +593,7 @@ button:active {
     align-items: center;
     justify-content: flex-start;
     padding-top: 96px;
+    background-color: var(--color-light);
 
 }
 
@@ -586,7 +628,7 @@ button:active {
 
 .todoSec h4 {
     width: 100%;
-    color: var(--text-black);
+    color: var(--color-black);
     font-weight: 200;
     font-size: 1.4em;
     font-family: var(--head-font);
@@ -631,12 +673,12 @@ button:active {
     gap: 16px;
     transition: all 0.1s ease-out;
     border: 1px solid var(--color-gray);
-    background-color: var(--bg-body);
     position: relative;
     user-select: none;
     cursor: pointer;
     transform: translateY(-4px);
 }
+
 .tech-card .git {
     background-color: white;
     border-radius: 999px !important;
@@ -670,7 +712,7 @@ button:active {
 
 .tech-card:hover {
     transform: scale(1.05) translateY(0) !important;
-    border-color: var(--color-black);
+    border-color: var(--color-light);
 }
 
 
@@ -681,7 +723,7 @@ button:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-black);
+    background-color: var(--color-second);
     padding-top: 96px;
     overflow: hidden;
 }
@@ -774,7 +816,7 @@ button:active {
 .imgContainer {
     position: relative;
     border-radius: 24px;
-    background-color: #4d4d4d21;
+    background-color: var(--color-black);
     transition: all 0.3s ease;
     display: flex;
     justify-content: center;
@@ -813,7 +855,6 @@ button:active {
 }
 
 .imgContainer:hover {
-    background-color: #3d3d3d75;
     transform: scale(1.02);
 }
 
@@ -919,20 +960,22 @@ button:active {
     width: 100%;
     padding-top: 64px;
     padding-inline: 8px;
+    background-color: var(--color-black);
 }
 
 .my-message p {
     font-size: 1.4em;
-    color: var(--text-black);
+    color: var(--color-primary);
     text-align: center;
     font-family: var(--head-font);
     user-select: none;
     font-weight: 100;
+
 }
 
 .my-message hr {
     margin: auto;
-    margin-block: 24px;
+    margin-top: 24px;
     width: 8px;
     height: 8px;
     border: 4px solid var(--color-secondary);
@@ -940,8 +983,8 @@ button:active {
 }
 
 .avatar {
-    /* margin: auto; */
     width: 100%;
+    background-color: var(--color-black);
 }
 
 .avatar .row {
@@ -1034,13 +1077,27 @@ button:active {
 
     /* ---Main Section---- */
     .main .row {
-        width: 94%;
+        width: 90%;
+    }
+
+    .main .rowimg .profileimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main .rowimg img {
+        width: 88%;
     }
 
     .aboutSec .row,
     .todoSec .row,
     .productSec .row {
         width: 88%;
+    }
+
+    .main .rowimg button {
+        display: none;
     }
 
     /* --Skillset Section--- */
@@ -1060,19 +1117,6 @@ button:active {
     .Con-buttons .head-buttons {
         width: 100%;
     }
-
-    .Con-buttons .app-icons {
-        width: 64%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .Con-buttons #mail-button {
-        width: 100%;
-    }
-
 
 
 }
@@ -1197,6 +1241,10 @@ button:active {
 ::-webkit-scrollbar {
     width: 4px;
     /* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: var(--color-black);
 }
 
 /* Handle */

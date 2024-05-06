@@ -4,25 +4,14 @@ let mydate = new Date();
 output.innerHTML = "Build" + "@" + mydate.getFullYear();
 
 
-const blurObj = document.getElementsByClassName('blur');
+
 const toggleContainer = document.getElementById("toggleContainer");
 const toggleBtn = document.getElementById("toggleBtn");
-const iconImg = toggleBtn.querySelector("#ham-icon"); // Use querySelector to get the element by ID
+const iconImg = toggleBtn.querySelector("#ham-icon");
 
 toggleBtn.addEventListener('click', () => {
     toggleContainer.classList.toggle('show-navigation');
     iconImg.classList.toggle('fa-xmark');
-
-    for (let i = 0; i < blurObj.length; i++) {
-        // Skip applying 'dimmed' class to toggleContainer and toggleBtn
-        if (blurObj[i] !== toggleContainer && blurObj[i] !== toggleBtn) {
-            if (toggleContainer.classList.contains('show-navigation')) {
-                blurObj[i].classList.add('dimmed');
-            } else {
-                blurObj[i].classList.remove('dimmed');
-            }
-        }
-    }
 });
 
 
@@ -45,14 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     top: targetSection.offsetTop,
                     behavior: "smooth"
                 });
-
             }
             toggleContainer.classList.remove('show-navigation');
-            for (let i = 0; i < blurObj.length; i++) {
-                blurObj[i].classList.remove('dimmed');
-            }
             iconImg.classList.toggle('fa-xmark');
-
         });
     });
 
@@ -144,13 +128,6 @@ window.addEventListener('scroll', checkScroll);
 checkScroll();
 
 
-gsap.to(".headline", {
-    duration: 2,
-    ease: "power2.out",
-    x: 0,
-});
-
-
 
 // toggle dark mode 
 const body = document.body
@@ -160,9 +137,103 @@ const tglThemeBtn = document.getElementById("tglThemeBtn")
 tglThemeBtn.addEventListener("click", () => {
     body.classList.toggle("dark-mode")
     if (body.classList.contains("dark-mode")) {
-        tglThemeBtn.innerText = "👓";
+        tglThemeBtn.classList.add('fa-moon');
+        tglThemeBtn.classList.remove('fa-sun');
+
     }
     else {
-        tglThemeBtn.innerText = "🎃";
+        tglThemeBtn.classList.add('fa-sun');
+        tglThemeBtn.classList.remove('fa-moon');
     }
+})
+
+
+
+// gsap Animation 
+gsap.registerPlugin(ScrollTrigger);
+var tl = gsap.timeline()
+
+tl.from("#nameHead", {
+    y: 50,
+    opacity: 0,
+    duration: 0.4,
+    delay: 3,
+    stagger: 0.5
+});
+
+tl.from("#appIcons", {
+    x: 400,
+    rotate: 360,
+    opacity: 0,
+    duration: 0.4,
+    stagger: 0.2
+});
+
+tl.from("#nav", {
+    y: -500,
+    opacity: 0,
+    duration: 0.4,
+});
+tl.from("#hamNav", {
+    scale: 0,
+    opacity: 0,
+    duration: 0.4,
+});
+
+gsap.from('#profileimgg', {
+    opacity: 0,
+    y: 400,
+    duration: 0.4,
+    delay: 3,
+})
+
+// section 2 
+
+gsap.from('.aboutSec #scrollanimated', {
+    opacity: 0,
+    duration: 0.4,
+    y: 200,
+    scrollTrigger: {
+        trigger: ".aboutSec #scrollanimated",
+
+    }
+})
+const tlp = gsap.timeline()
+gsap.from('.todoSec #scrollanimated', {
+    opacity: 0,
+    duration: 0.8,
+    x: -400,
+    scrollTrigger: {
+        trigger: ".todoSec #scrollanimated",
+        start: "top 50%",
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById('resumeBtn').style.display = 'none'
+document.getElementById('navbtn').addEventListener("click", () => {
+    document.getElementById('resumeBtn').classList.toggle('btnRmv')
 })

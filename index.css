@@ -26,6 +26,7 @@
     --color-black: #1b1b1b;
     --color-gray: #b9b9b980;
     --toggle-btn: #eeeeee73;
+    --color-second: #2c2c2c;
 }
 
 .dark-mode {
@@ -42,7 +43,7 @@
     --color-black: #ffffff;
     --color-gray: #b9b9b980;
     --toggle-btn: #eeeeee73;
-
+    --color-second: #ffffffef;
 }
 
 

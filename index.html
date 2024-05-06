@@ -5,16 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta theme="color" content="var(--color-black)">
-    <title>Yash | Portx64</title>
+    <title>Yash | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="./Images/cursor.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
-        integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -23,27 +20,32 @@
     <section id="toggleContainer">
         <div class="toggleIcons">
             <a href="#home">🍙 HOME</a>
-            <a href="#about">📸 STORY</a>
+            <a href="#about">📸 ABOUT</a>
             <a href="#technologies">🤿 EXPERTISE</a>
             <a href="#projects">🔮 PRODUCTS</a>
         </div>
     </section>
     <header class="navContainer">
-        <nav>
+        <nav id="nav">
             <div class="leftNav">
                 <img src="/Images/Avatar-rmv.png" alt="My Image Model">
             </div>
             <div class="rightNav">
-                <a href="./Docs/resume024.pdf" id="navbtns" download="resume024.pdf" class="resume " title="Resume">
-                    RES 📑
+                <a id="navbtn" class="resume ">
+                    RESUME
                 </a>
-                <a class="contact"  title="Contact" id="navbtns" href="https://wa.me//6350229611">
+                <div id="resumeBtn">
+                    <a href="./Docs/Resume@yashcx84.pdf" download="Resume@yashcx84.pdf">
+                        Download Resume ↓
+                    </a>
+                </div>
+                <a class="contact" title="Contact" href="https://wa.me//6350229611">
                     CONTACT
                 </a>
-                <button id="tglThemeBtn" title="ThemeMode">🎃</button>
+                <button><i class="fa-solid fa-sun" id="tglThemeBtn" title="ThemeMode"></i></button>
             </div>
         </nav>
-        <section class="bottom-nav">
+        <section class="bottom-nav" id="hamNav">
             <div class="icon" id="toggleBtn">
                 <i class="fa-solid fa-bars" id="ham-icon"></i>
             </div>
@@ -51,58 +53,64 @@
     </header>
 
     <!-- Main Section -->
-    <section class="main blur" id="home">
+    <section class="main" id="home">
         <div class="row">
-            <div class="dot">
-
+            <div class="rowimg">
+                <div class="profileimg" id="profileimgg">
+                    <img src="./Images/IMG_20240505_230824.png.jpg" alt="Profile Image" srcset="">
+                    <a href="mailto:yashcx84@gmail.com" target="_blank">👋<span>Let's Talk</span></a>
+                </div>
             </div>
-            <h3 class="headline" id="user-select">
-                WELCOME!
-            </h3>
-            <h1>
-                YASH JANGID.
-            </h1>
-            <p class="head-description" id="user-select">
-                <span style="color: var(--color-secondary);">{ </span>Developer<span
-                    style="color: var(--color-secondary);">, </span>Designer<span
-                    style="color: var(--color-secondary);"> }</span>
-            </p>
-            <p class="head-description" id="user-select">
-                Code Elegant Solutions To Crafting Visually Stunning Designs<span>.</span>
-            </p>
-            <div class="Con-buttons">
-                <div class="app-icons">
-                    <a href="https://github.com/yashcx84" target="_blank"><i class="fab fa-github"></i>
-                        <span>GIT</span></a>
-                    <a href="https://www.linkedin.com/in/yashjangidd/" target="_blank"><i
-                            class="fa-brands fa-linkedin-in"></i>
-                        <span>Linkedin</span></a>
-                    <a href="https://www.instagram.com/yashcx84_/" target="_blank"><i class="fab fa-instagram"></i>
-                        <span>Instagram</span></a>
-                    <a href="mailto:yashcx84@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i>
-                        <span>Mail</span></a>
+            <div class="rowcontent">
+                <h3 class="headline" id="nameHead">
+                    <!-- Hello! -->
+                </h3>
+                <p class="head-description" id="nameHead">
+                    Developer & Designer<span>.</span>
+                </p>
+                <h1 id="nameHead">
+                    Yash Jangid
+                </h1>
+                <p class="head-description" id="nameHead">
+                    I utilize code to sculpt <span>visually striking designs</span>, yielding elegant outcomes. Merging
+                    Development with Intuitive UI Design for Impactful Digital Experiences<span>.</span>
+                </p>
+                <div class="Con-buttons">
+                    <div class="app-icons">
+                        <a href="https://github.com/yashcx84" target="_blank" id="appIcons"><i
+                                class="fab fa-github"></i>
+                            <span>GIT</span></a>
+                        <a href="https://www.linkedin.com/in/yashjangidd/" target="_blank" id="appIcons"><i
+                                class="fa-brands fa-linkedin-in"></i>
+                            <span>Linkedin</span></a>
+                        <a href="https://www.instagram.com/yashcx84_/" target="_blank" id="appIcons"><i
+                                class="fab fa-instagram"></i>
+                            <span>Instagram</span></a>
+                        <a href="mailto:yashcx84@gmail.com" target="_blank" id="appIcons"><i
+                                class="fa-regular fa-envelope"></i>
+                            <span>Mail</span></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="aboutSec blur black-background" id="about">
+    <section class="aboutSec  black-background" id="about">
         <div class="row">
-            <h3>
-                STORY
+            <h3 id="scrollanimated">
+                ABOUT
                 <hr>
             </h3>
             <div class="story-container">
                 <div class="story-insider">
-                    <h1 class="animated-element">
+                    <h1 id="scrollanimated">
                         DESIGN<span style="color: var(--color-secondary); font-size: 0.35em;">PLUS</span> TECH
                     </h1>
-                    <p class="animated-element">
+                    <p id="scrollanimated">
                         SINCE 2021
                     </p>
                 </div>
-                <h3 class="animated-element">I specialize in creating clean and engaging content that effectively
+                <h3 id="scrollanimated">I specialize in creating clean and engaging content that effectively
                     communicates the message, with a focus of simplicity and clarity. By seamlessly merging the fields
                     of technology and design, I ensure that the end result is not only visually appealing but also
                     intuitive and user-friendly. Whether it's designing a user interface, developing a website, or
@@ -114,54 +122,54 @@
     </section>
 
     <!-- Technology Section -->
-    <section class="todoSec  blur" id="technologies">
+    <section class="todoSec" id="technologies">
         <div class="row">
-            <h3>
+            <h3 id="scrollanimated">
                 EXPERTISE
                 <hr>
             </h3>
             <div class="experties">
                 <div class="expertie">
-                    <h1>Web dev<span>.</span></h1>
-                    <h4>Web Development and Design with Latest Design Integration Tools</h4>
+                    <h1 id="scrollanimated">Web dev<span>.</span></h1>
+                    <h4 id="scrollanimated">Web Development and Design with Latest Design Integration Tools</h4>
                     <div class="skillContainer">
-                        <div class="tech-card animated-element">
+                        <div class="tech-card animated-element" id="cardanim">
                             <img src="./Images/html-logo.png" alt="HTML  Logo">
                             <p>HTML5</p>
                         </div>
-                        <div class="tech-card animated-element">
+                        <div class="tech-card animated-element" id="cardanim">
                             <img src="./Images/css-logo.png" alt="CSS Logo">
                             <p>CSS3</p>
                         </div>
-                        <div class="tech-card animated-element">
+                        <div class="tech-card animated-element" id="cardanim">
                             <img src="./Images/js.png" alt="JavaScript Logo">
                             <p>JavaScript</p>
                         </div>
-                        <div class="tech-card animated-element">
+                        <div class="tech-card animated-element" id="cardanim">
                             <img src="./Images/React.png" alt="ReactJs Logo">
                             <p>ReactJs</p>
                         </div>
-                        <div class="tech-card animated-element">
+                        <div class="tech-card animated-element" id="cardanim">
                             <img src="./Images/node.png" alt="NodeJs Logo">
                             <p>NodeJs</p>
                         </div>
-                        <div class="tech-card animated-element">
+                        <div class="tech-card animated-element" id="cardanim">
                             <img src="./Images/git-logo.png" alt="NodeJs Logo">
                             <p>Git</p>
                         </div>
-                        <div class="tech-card animated-element">
+                        <div class="tech-card animated-element" id="cardanim">
                             <img class="git" src="./Images/github-logo.png" alt="NodeJs Logo">
                             <p>GitHub</p>
                         </div>
-                        <div class="tech-card animated-element">
+                        <div class="tech-card animated-element" id="cardanim">
                             <img src="./Images/bootstrap.png" alt="Bootstrap Logo">
                             <p>Bootstrap</p>
                         </div>
-                        <div class="tech-card animated-element">
+                        <div class="tech-card animated-element" id="cardanim">
                             <img src="./Images/tailwind-logo.png" alt="NodeJs Logo">
                             <p>TailwindCss</p>
                         </div>
-                        <div class="tech-card animated-element">
+                        <div class="tech-card animated-element" id="cardanim">
                             <img src="./Images/figma.png" alt="Figma Logo">
                             <p>Figma</p>
                         </div>
@@ -172,7 +180,7 @@
     </section>
 
     <!-- -------Product Section -->
-    <section class="productSec  blur" id="projects">
+    <section class="productSec  " id="projects">
         <div class="row">
             <h3>
                 PRODUCTS
@@ -196,20 +204,6 @@
                 </div>
                 <div class="product animated-element">
                     <div class="imgContainer">
-                        <a href="https://airbnb-app-clone-omega.vercel.app/" target="_blank">
-                            <img src="./Images/Product04.PNG" alt="Product Image">
-                        </a>
-                        <a href="https://airbnb-app-clone-omega.vercel.app/" target="_blank">
-                            <button class="live-btn">Live <i class="fa-solid fa-arrow-right"></i></button>
-                        </a>
-                    </div>
-                    <div class="productDetails">
-                        <h1>Airbnb Clone<span>.</span> </h1>
-                        <p class="product-descp">Airbnb Application Clone | ReactJs, TailwindCss</p>
-                    </div>
-                </div>
-                <div class="product animated-element">
-                    <div class="imgContainer">
                         <a href="https://findmon.vercel.app/" target="_blank">
                             <img src="./Images/Product01.png" alt="Product Image">
                         </a>
@@ -222,6 +216,21 @@
                         <p class="product-descp">Image Search API Product | ReactJs, Unsplash API </p>
                     </div>
                 </div>
+                <div class="product animated-element">
+                    <div class="imgContainer">
+                        <a href="https://airbnb-app-clone-omega.vercel.app/" target="_blank">
+                            <img src="./Images/Product04.PNG" alt="Product Image">
+                        </a>
+                        <a href="https://airbnb-app-clone-omega.vercel.app/" target="_blank">
+                            <button class="live-btn">Live <i class="fa-solid fa-arrow-right"></i></button>
+                        </a>
+                    </div>
+                    <div class="productDetails">
+                        <h1>Airbnb Clone<span>.</span> </h1>
+                        <p class="product-descp">Airbnb Application Clone | ReactJs, TailwindCss</p>
+                    </div>
+                </div>
+
                 <div class="product animated-element">
                     <div class="imgContainer">
                         <a href="https://pinout-yas-projects-e0ca31c4.vercel.app/" target="_blank">
@@ -240,7 +249,7 @@
                     <h4 class="head3">
                         Inspect More Projects On
                     </h4>
-                    <hr class="animated-element">
+                    <hr>
                     <div class="connectCons">
                         <a class="gitSec animatedd-element" target="_blank" href="https://github.com/yashcx84">
                             <i class="fa-brands fa-github"></i>
@@ -256,13 +265,13 @@
     </section>
 
     <!-- Footer Message -->
-    <div class="my-message  blur">
-        <p class="animated-element">You're welcome! Your visit is greatly appreciated and valued.</p>
+    <div class="my-message  ">
+        <p>You're welcome! Your visit is greatly appreciated and valued.</p>
         <hr>
     </div>
 
     <!-- Footer Section-->
-    <footer class="avatar  blur" id="connect" class="animated-element">
+    <footer class="avatar" id="connect">
         <div class="row">
             <img src="./Images/Avatar-rmv.png" alt="My Image Model">
             <div class="dateObjContainer">
@@ -284,7 +293,15 @@
         </div>
         <h1>Buffering...</h1>
     </div>
+
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
+        integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 
 </html>
