@@ -284,8 +284,8 @@ nav button:active {
 
 .main .rowcontent h1 {
     width: 100%;
-    white-space: nowrap;
-    font-size: clamp(4.5em, 8vw, 11em);
+    /* white-space: nowrap; */
+    font-size: clamp(4em, 8vw, 11em);
     user-select: none;
     font-family: var(--head-font);
     text-align: center;
@@ -293,7 +293,7 @@ nav button:active {
     background: linear-gradient(180deg, var(--text-black), var(--color-primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    letter-spacing: -8px;
+    letter-spacing: -6px;
     font-family: 'Gilroy', sans-serif;
     font-weight: bolder;
 }

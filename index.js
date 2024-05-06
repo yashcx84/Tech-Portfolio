@@ -162,7 +162,7 @@ tl.from("#nameHead", {
 });
 
 tl.from("#appIcons", {
-    x: 400,
+    y: 400,
     rotate: 360,
     opacity: 0,
     duration: 0.4,
